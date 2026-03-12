@@ -44,7 +44,7 @@ nav a {
 
 nav a:hover {
     background: var(--primary);
-    color: white;
+    color: var(--page-bg);
     border-radius: 4px;
 }
 
