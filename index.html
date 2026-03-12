@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>First Page</h1>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 131 – Dynamic Web Fundamentals – Merari Flores</title>
+
+        <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Home page for Merari Flores.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="stylesheet" href="styles/base.css">
+        <script src="scripts/getdates.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+            <nav>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://byupw.instructure.com/">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
+                <a href="#">Final Project</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Merari Flores</h1>
+
+            <div class="cards">
+
+                <!-- LEFT CARD: About + Mexico -->
+                <section class="card card-left">
+                    <h2>About Me</h2>
+
+                    <div class="about-top">
+                        <p>
+                            I'm originally from Mexico. I love learning new things; lately I've been teaching myself
+                            piano and guitar,
+                            cooking for my family, playing with my kids, reading, and traveling. I was studying to
+                            become a commercial
+                            pilot and was very close to finishing my aviation degree, but due to financial challenges I
+                            had to stop.
+                            I've traveled to many countries and experienced different cultures, gastronomy, and
+                            traditions, and met
+                            incredible people along the way. I love web design and drawing. I already earned a degree in
+                            computer
+                            science, and now I'm working on my bachelor’s degree.
+                        </p>
+
+                        <img class="profile" src="images/profile.jpg" alt="Photo of Merari Flores">
+                    </div>
+
+                    <h3>Mexico</h3>
+                    <div class="country">
+                        <img class="flag" src="images/bandera.jpg" alt="Official Flag of Mexico">
+                        <p>
+                            Mexico is a country full of color, history, and tradition. I grew up surrounded by music,
+                            food, and
+                            celebrations that bring people together. From the ancient cultures like the Aztecs and Maya
+                            to the modern
+                            blend of art, family, and community, Mexico has a spirit that stays with you. Its flavors,
+                            its warmth, and
+                            its deep sense of heritage continue to shape the way I see the world.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- RIGHT CARD: Resources -->
+                <section class="card card-right">
+                    <h2>Web Dev Resources</h2>
+                    <ul>
+                        <li><a href="https://dev.to/">Dev.to Community</a></li>
+                        <li><a href="https://css3generator.com/">CSS3 Generator</a></li>
+                        <li><a href="https://codepen.io/">CodePen – Front‑End Playground</a></li>
+                        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                        <li><a href="https://colorhunt.co/">ColorHunt – Palettes</a></li>
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+
 </html>
