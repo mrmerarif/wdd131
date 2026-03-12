@@ -37,7 +37,6 @@ nav {
 
 nav a {
     color: var(--primary);
-    /* FIXED: better contrast than white */
     text-decoration: none;
     font-size: 0.95rem;
     padding: 0.3rem 0.6rem;
@@ -46,7 +45,6 @@ nav a {
 nav a:hover {
     background: var(--primary);
     color: white;
-    /* clean, readable hover */
     border-radius: 4px;
 }
 
