@@ -1,0 +1,37 @@
+
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+}
+
+
+header {
+    background-color: #1f4679;
+    color: white;
+   
+}
+
+main {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* SECTIONS — light background */
+section {
+    padding: 1rem;
+    background-color: #f7f9fc;
+    color: #1f4679;
+    
+}
+
+
+footer {
+    background-color: #1f4679;
+    color: white;
+}
