@@ -20,5 +20,6 @@ deleteButton.setAttribute('aria-label', 'Remove chapter');
 // This will Append the delete button to the li element.
 li.append(deleteButton);
 
-// This will append the li element variable to the unordered list in the HTML page. 
+// This will append the li element variable to the unordered list in the HTML page . 
 list.append(li);
+
