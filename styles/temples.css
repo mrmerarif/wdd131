@@ -1,0 +1,153 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAFAF4;
+    color: #30364F;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #30364F;
+    color: #F0F0DB;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #2978B5;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* HAMBURGER */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #F0F0DB;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* NAV – MOBILE DEFAULT */
+nav {
+    background-color: #30364F;
+    /* same as header on mobile */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAV LIST */
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    /* space BETWEEN buttons */
+    padding: 0.75rem 1rem 1rem;
+    /* space inside, but background still full width */
+    margin: 0;
+    width: 100%;
+}
+
+/* MOBILE NAV TABS */
+.navigation a {
+    display: none;
+    padding: 1rem;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #F0F0DB;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #2978B5;
+    /* tab color */
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* HOVER */
+.navigation a:hover {
+    background-color: #E1D9BC;
+    /* image card color */
+    color: #30364F;
+    font-weight: bold;
+}
+
+/* SHOW LINKS WHEN OPEN */
+.open a {
+    display: block;
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* GRID */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* FIGURES */
+figure {
+    background-color: #E1D9BC;
+    padding: 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background-color: #30364F;
+    color: #F0F0DB;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A responsive temple photo album for WDD131.">
+        <meta name="author" content="Merari Flores">
+
+        <title>Temple Album</title>
+
+
+        <!-- Google Font example (you can change later) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Mobile-first CSS -->
+        <link rel="stylesheet" href="styles/temples.css">
+        <!-- Larger view CSS -->
+        <link rel="stylesheet" href="styles/temples-large.css">
+
+        <!-- JavaScript (deferred) -->
+        <script src="scripts/temples.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Temple Album</h1>
+
+            <!-- Hamburger button (for mobile) -->
+            <button id="menu" aria-label="Toggle navigation"></button>
+
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" id="filter-old">Old</a></li>
+                    <li><a href="#" id="filter-new">New</a></li>
+                    <li><a href="#" id="filter-large">Large</a></li>
+                    <li><a href="#" id="filter-small">Small</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>My Favorite and Most Special Temples</h2>
+
+            
+            <section class="temple-grid">
+                <figure>
+                    <img src="images/temples/mexico-city-temple1.webp" alt="Mexico City Temple">
+                    <figcaption>Mexico City Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/los-angeles-temple.webp" alt="Los Angeles Temple">
+                    <figcaption>Los Angeles Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/jordan-river-temple.webp" alt="Jordan River Temple">
+                    <figcaption>Jordan River Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/salt-lake-temple1.webp" alt="Salt Lake Temple">
+                    <figcaption>Salt Lake Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/bountiful-temple.webp" alt="Bountiful Temple">
+                    <figcaption>Bountiful Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/puebla-temple.webp" alt="Puebla Temple">
+                    <figcaption>Puebla Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/washington-temple.webp" alt="Washington D.C. Temple">
+                    <figcaption>Washington D.C. Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/oaxaca-temple.webp" alt="Oaxaca Temple">
+                    <figcaption>Oaxaca Temple</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/temples/san-diego-temple.webp" alt="San Diego Temple">
+                    <figcaption>San Diego Temple</figcaption>
+                </figure>
+                  
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Merari Flores | Salt Lake City, UT</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </footer>
+    </body>
+
+</html>

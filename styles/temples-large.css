@@ -1,0 +1,55 @@
+/* TABLET & DESKTOP NAV */
+@media (min-width: 37.5em) {
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        background-color: #30364F;
+        width: 100%;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* evenly spread tabs */
+        align-items: center;
+        padding: 0.75rem 0;
+        gap: 0;
+        /* remove mobile gap */
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem 2rem;
+        margin: 0;
+        border-radius: 12px;
+    }
+
+    .navigation a:hover {
+        background-color: #E1D9BC;
+        color: #30364F;
+    }
+
+    /* GRID */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP — 3 columns */
+@media (min-width: 60em) {
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure {
+        transition: transform 0.2s ease;
+    }
+
+    figure:hover {
+        transform: scale(1.03);
+    }
+}
