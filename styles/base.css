@@ -20,12 +20,12 @@ header {
     color: white;
 }
 
-#course-title {
+/* #course-title {
     display: block;
     text-align: center;
     /*font-size: 1.4rem; /* Adjusted for better visibility */
     padding: 1rem;
-}
+} */
 
 /* NAVIGATION */
 nav {
