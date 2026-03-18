@@ -23,7 +23,7 @@ header {
 #course-title {
     display: block;
     text-align: center;
-    font-size: 1.4rem;
+    /*font-size: 1.4rem; /* Adjusted for better visibility */
     padding: 1rem;
 }
 
