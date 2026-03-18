@@ -10,9 +10,6 @@ html,
 body {
     width: 100%;
     overflow-x: hidden;
-}
-
-body {
     font-family: 'Roboto', sans-serif;
     background-color: #FAFAF4;
     color: #30364F;
@@ -54,7 +51,7 @@ header h1 {
     content: "✖";
 }
 
-/* NAV – MOBILE DEFAULT */
+/* NAV - MOBILE DEFAULT */
 nav {
     background-color: #30364F;
     width: 100%;
@@ -126,12 +123,6 @@ figure {
 figure img {
     width: 100%;
     border-radius: 12px;
-}
-
-figcaption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-weight: bold;
 }
 
 /* FOOTER */
