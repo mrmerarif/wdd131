@@ -4,29 +4,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A responsive temple photo album for WDD131.">
+        <meta name="description"
+            content="A responsive temple photo album created for WDD 131 Dynamic Web Fundamentals, featuring images, filters, and a mobile-friendly layout.">
+
         <meta name="author" content="Merari Flores">
 
-        <title>Temple Album</title>
+        <title>WDD 131 | Dynamic Web Fundamentals | Merari Flores</title>
+
 
 
         <!-- Google Font example (you can change later) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        
 
+        
+        <link rel="stylesheet" href="styles/base.css">
         <!-- Mobile-first CSS -->
         <link rel="stylesheet" href="styles/temples.css">
         <!-- Larger view CSS -->
         <link rel="stylesheet" href="styles/temples-large.css">
+        
 
+        <script src="scripts/getdates.js" defer></script>
         <!-- JavaScript (deferred) -->
         <script src="scripts/temples.js" defer></script>
+        
     </head>
 
     <body>
         <header>
             <h1>Temple Album</h1>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
 
             <!-- Hamburger button (for mobile) -->
             <button id="menu" aria-label="Toggle navigation"></button>
@@ -44,6 +55,9 @@
 
         <main>
             <h2>My Favorite and Most Special Temples</h2>
+
+            <section class="card"></section>
+            <section class="card"></section>
 
             
             <section class="temple-grid">
