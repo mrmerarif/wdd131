@@ -1,0 +1,61 @@
+body {
+    font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.banner {
+    padding: 0.75rem 1.25rem;
+    background-color: #eee;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: grid; /* activity 1: added display: grid to create a grid layout for the main content */
+    grid-template-columns: 2fr 1.5fr; /*Activity 1 added the grid-template-columns to create a 2-column layout with the left column being wider than the right column */
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+h2 {
+    color: navy;
+    text-align: left; /* activity 1: fixed the text-align issue */
+}
+
+main > h2 {
+    grid-column: 1 / 3;
+    /*activity 1: added the span for both columns */
+    margin-bottom: 0.5rem;
+}
+
+article p {
+    text-align: justify;
+}
+
+.callout {
+    color: #ffffff; /* activity 1: fixed the text color issue to white to pass AA and AAA */
+    background-color: #702963;
+    padding: 1rem 1.25rem;  /*activity 1:fixed the top/bottom, left/right issues */
+    margin-top: 1rem;
+    border-radius: 4px;
+    grid-column: 1 / 3;
+    /* This will span full width under both columns */
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: smaller;
+    text-align: left;
+}
