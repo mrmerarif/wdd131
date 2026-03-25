@@ -11,7 +11,7 @@
 
     --font-heading: "Georgia", serif;
     --font-body: system-ui, sans-serif;
-    
+
 }
 
 .place-page header {
@@ -46,19 +46,26 @@
 
 .place-page .card {
     background-color: var(--color-card-bg);
-    padding: .25rem; /* FIX: reduces padding to fit content better */
+    /* FIX: ensures light background */
+    padding: .25rem;
+    /* FIX: reduces padding to fit content better */
     border-radius: 10px;
     box-shadow: var(--shadow-soft);
     text-align: center;
-    line-height: 0.85; /* fixes the size of the card.*/
+    line-height: 0.85;
+    /* fixes the size of the card.*/
     color: var(--color-text);
     /* FIX: ensures readable text */
 }
 
+/* FIX: ensure h2 never inherits dark background from base.css */
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
-    color: white;/* FIX: override base.css since background is dark */
+    color: white;
+    /* FIX: override base.css since background is dark */
+    background-color: transparent;
+    /* FIX: removes dark navy background */
 }
 
 .place-page .weather-icon {
@@ -71,8 +78,9 @@
 
     .place-page .card.data {
         position: absolute;
-        top: 1rem; /*Data card spaced from top of hero image */
-        left: 1rem; 
+        top: 1rem;
+        /*Data card spaced from top of hero image */
+        left: 1rem;
         width: 210px;
         background-color: var(--color-card-bg);
         /* FIX: override base.css */
@@ -82,8 +90,10 @@
 
     .place-page .card.weather {
         position: absolute;
-        bottom: 1.25rem; /*fixes spacing from bottom of hero image */
-        right: 1.25rem; /*fixes spacing from right edge of hero image */
+        bottom: 1.25rem;
+        /*fixes spacing from bottom of hero image */
+        right: 1.25rem;
+        /*fixes spacing from right edge of hero image */
         width: 210px;
         background-color: var(--color-card-bg);
         /* FIX: override base.css */
