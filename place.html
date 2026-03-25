@@ -10,81 +10,80 @@
 
         <title>WDD 131 | Dynamic Web Fundamentals | Merari Flores</title>
 
-        
+        <!-- Required Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
 
-        
+        <!-- Required base.css (DO NOT MODIFY) -->
         <link rel="stylesheet" href="styles/base.css">
 
+        <!-- Page-specific CSS -->
         <link rel="stylesheet" href="styles/place.css">
 
-        <!-- Required JS file -->
+        <!-- Required JS -->
         <script src="scripts/getdates.js" defer></script>
 
-        <!-- Your JS -->
+        <!-- Page JS -->
         <script src="scripts/place.js" defer></script>
     </head>
 
     <body>
-        <header>
-            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
 
-            <h1>Tulum, Mexico</h1>
+        <div class="place-page">
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Places</a>
-                <a href="#">Assignments</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
+            <header>
+                <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+                <h1>Tulum, Mexico</h1>
+            </header>
 
-        <main>
+            <main>
 
-            <div class="hero-wrapper">
+                <div class="hero-wrapper">
 
-                <div class="hero">
-                    <picture>
-                        <source srcset="images/tulum-large.webp" media="(min-width: 1000px)">
-                        <source srcset="images/tulum-medium.webp" media="(min-width: 600px)">
-                        <img src="images/tulum-small.webp" alt="Tulum ruins overlooking the turquoise Caribbean Sea"
-                            width="800" height="450">
-                    </picture>
+                    <div class="hero">
+                        <picture>
+                            <source srcset="images/tulum-large.webp" media="(min-width: 1000px)">
+                            <source srcset="images/tulum-medium.webp" media="(min-width: 600px)">
+                            <img src="images/tulum-small.webp" alt="Tulum ruins overlooking the turquoise Caribbean Sea"
+                                width="800" height="450">
+                        </picture>
+                    </div>
+
+                    <!-- DATA CARD -->
+                    <section class="card data">
+                        <h2>Data</h2>
+                        <p><span class="label">Country:</span> Mexico</p>
+                        <p><span class="label">Region:</span> Quintana Roo</p>
+                        <p><span class="label">Population:</span> ~46,000</p>
+                        <p><span class="label">Climate:</span> Tropical</p>
+                        <p><span class="label">Known For:</span> Ruins, turquoise water, cenotes</p>
+                        <p><span class="label">Timezone:</span> EST (UTC‑5)</p>
+                    </section>
+
+                    <!-- WEATHER CARD -->
+                    <section class="card weather">
+                        <h2>Weather</h2>
+
+                        <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon">
+
+                        <p>Temperature: <span id="temperature">82</span> °F</p>
+                        <p>Conditions: Partly Cloudy</p>
+                        <p>Wind: <span id="windSpeed">10</span> mph</p>
+                        <p>Wind Chill: <span id="windChill">N/A</span></p>
+                    </section>
+
                 </div>
 
-                <!-- DATA CARD -->
-                <section class="card data">
-                    <h2>Data</h2>
-                    <p><span class="label">Country:</span> Mexico</p>
-                    <p><span class="label">Region:</span> Quintana Roo</p>
-                    <p><span class="label">Population:</span> ~46,000</p>
-                    <p><span class="label">Climate:</span> Tropical</p>
-                    <p><span class="label">Known For:</span> Ruins, turquoise water, cenotes</p>
-                    <p><span class="label">Timezone:</span> EST (UTC‑5)</p>
-                </section>
+            </main>
 
-                <!-- WEATHER CARD -->
-                <section class="card weather">
-                    <h2>Weather</h2>
+            <footer>
+                <p>&copy; <span id="currentyear"></span> Merari Flores | Salt Lake City, Utah</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </footer>
 
-                    <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon">
+        </div>
 
-                    <p>Temperature: <span id="temperature">82</span> °F</p>
-                    <p>Conditions: Partly Cloudy</p>
-                    <p>Wind: <span id="windSpeed">10</span> mph</p>
-                    <p>Wind Chill: <span id="windChill">N/A</span></p>
-                </section>
-
-            </div>
-
-        </main>
-
-        <footer>
-            <p>&copy; <span id="currentyear"></span> Merari Flores | Salt Lake City, Utah</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
-        </footer>
     </body>
 
 </html>
