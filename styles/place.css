@@ -1,92 +1,77 @@
 :root {
-    /* Your palette */
     --color-navy: #0b1b2b;
     --color-taupe: #b3a18f;
     --color-beige: #e1d9bc;
     --color-gray: #acbac4;
     --color-bg: #f5f3ef;
-
-    /* Slight transparency for cards */
     --color-card-bg: rgba(255, 255, 255, 0.85);
-
     --color-text: #222;
 
     --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.14);
 
-    --font-heading: "Georgia", "Times New Roman", serif;
-    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: "Georgia", serif;
+    --font-body: system-ui, sans-serif;
 
     --max-width: 1200px;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: var(--font-body);
-    color: var(--color-text);
     background-color: var(--color-bg);
-    line-height: 1.5;
+    color: var(--color-text);
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
-/* HEADER + FOOTER */
-
-header,
-footer {
-    background-color: var(--color-navy);
-    color: #fff;
-    text-align: center;
-}
+/* HEADER */
 
 header {
-    padding: 1.75rem 1rem;
+    background-color: var(--color-navy);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
     border-bottom: 8px solid var(--color-taupe);
 }
 
-header h1 {
-    margin: 0;
-    font-family: var(--font-heading);
-    font-size: 2rem;
+#course-title {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
-footer {
-    padding: 1.25rem 1rem;
-    border-top: 8px solid var(--color-taupe);
-    margin-top: 2rem;
+/* REQUIRED FLEXBOX */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-footer p {
-    margin: 0.25rem 0;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-/* MAIN LAYOUT */
+/* REQUIRED HOVER */
+nav a:hover {
+    color: var(--color-beige);
+}
+
+/* MAIN */
 
 main {
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
-/* HERO WRAPPER */
-
+/* REQUIRED GRID */
 .hero-wrapper {
+    display: grid;
     position: relative;
-    width: 100%;
-    max-width: none;
-    margin: 0;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
     display: block;
     border-bottom: 0.75rem solid var(--color-gray);
 }
@@ -95,84 +80,47 @@ main {
 
 .card {
     background-color: var(--color-card-bg);
-    margin: 1rem;
     padding: 1rem;
-    /* smaller padding */
     border-radius: 10px;
-    /* smaller radius */
     box-shadow: var(--shadow-soft);
-    width: auto;
-    line-height: 1.3;
-    /* tighter spacing */
-}
-
-.card h2,
-.card p {
     text-align: center;
+    line-height: 1.3;
+    width: auto;
 }
 
 .card h2 {
-    margin: 0 0 0.75rem;
+    margin-top: 0;
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    /* slightly smaller */
     color: var(--color-navy);
 }
 
-.card p {
-    margin: 0.25rem 0;
-    /* tighter spacing */
-}
-
-.label {
-    font-weight: 600;
-}
-
-/* WEATHER ICON (MOBILE) */
-
 .weather-icon {
     width: 50px;
-    /* slightly smaller */
-    height: auto;
     margin-bottom: 0.5rem;
 }
 
-/* DESKTOP VIEW */
+/* DESKTOP */
 
 @media (min-width: 768px) {
 
-    header h1 {
-        font-size: 2.4rem;
-    }
-
-    /* DATA CARD — TOP LEFT */
     .card.data {
         position: absolute;
         top: 1.5rem;
-        /* slightly higher */
         left: 1.5rem;
         width: 210px;
-        /* narrower like students */
-        margin: 0;
     }
 
-    /* WEATHER CARD — BOTTOM RIGHT */
     .card.weather {
         position: absolute;
         bottom: 1.5rem;
-        /* slightly higher */
         right: 1.5rem;
         width: 210px;
-        /* same width as data */
-        margin: 0;
     }
 
-    /* Hide SVG icon in desktop */
     .weather-icon {
         display: none;
     }
 
-    /* Add emoji in desktop */
     .weather h2::after {
         content: " ⛅";
     }

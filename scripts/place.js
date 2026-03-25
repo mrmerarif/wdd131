@@ -1,13 +1,7 @@
-// Footer year + last modified
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
-
-// Weather values
 const temp = parseFloat(document.getElementById("temperature").textContent);
 const wind = parseFloat(document.getElementById("windSpeed").textContent);
 const windChillSpan = document.getElementById("windChill");
 
-// Wind chill formula (°F)
 function calculateWindChill(t, s) {
   return Math.round(
     35.74 +
@@ -17,7 +11,6 @@ function calculateWindChill(t, s) {
   );
 }
 
-// Only calculate if valid
 if (temp <= 50 && wind > 3) {
   windChillSpan.textContent = calculateWindChill(temp, wind) + " °F";
 } else {
