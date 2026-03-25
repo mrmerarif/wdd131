@@ -58,7 +58,7 @@
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
-    color: white;/* FIX: override base.css since background is dark */
+    color: var(--color-text);
 }
 
 .place-page .weather-icon {
