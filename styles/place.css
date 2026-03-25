@@ -46,7 +46,6 @@
 
 .place-page .card {
     background-color: var(--color-card-bg);
-    /* FIX: ensures light background */
     padding: .25rem;
     /* FIX: reduces padding to fit content better */
     border-radius: 10px;
@@ -58,14 +57,17 @@
     /* FIX: ensures readable text */
 }
 
-/* FIX: ensure h2 never inherits dark background from base.css */
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
-    color: white;
-    /* FIX: override base.css since background is dark */
-    background-color: transparent;
-    /* FIX: removes dark navy background */
+    color: var(--color-navy);
+    /* FIX: dark text for better readability */
+    background-color: var(--color-card-bg);
+    /* FIX: solid light background so base.css can't darken it */
+    display: block;
+    /* FIX: ensure background covers full heading area */
+    padding: 0.25rem 0;
+    /* FIX: adds spacing so text is visible */
 }
 
 .place-page .weather-icon {
@@ -84,8 +86,13 @@
         width: 210px;
         background-color: var(--color-card-bg);
         /* FIX: override base.css */
-        color: var(--color-text);
+        color: white;
         /* FIX: readable text */
+    }
+
+    /* FIX: restore readable paragraph text ONLY for data card */
+    .place-page .card.data p {
+        color: var(--color-text);
     }
 
     .place-page .card.weather {
