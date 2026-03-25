@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="A place page about Tulum, Mexico with data and weather information. Includes a hero image, data card, and weather card.">
+        <meta name="author" content="Merari Flores">
+        <title>WDD 131 | Place Page | Tulum, Mexico</title>
+
+        <link rel="stylesheet" href="styles/place.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Tulum, Mexico</h1>
+        </header>
+
+        <main>
+
+            
+            <div class="hero-wrapper">
+
+                <div class="hero">
+                    <picture>
+                        <source srcset="images/tulum-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/tulum-medium.webp" media="(min-width: 600px)">
+                        <img src="images/tulum-small.webp" alt="Tulum ruins overlooking the turquoise Caribbean Sea"
+                            width="800" height="450">
+                    </picture>
+                </div>
+
+                
+                <section class="card data">
+                    <h2>Data</h2>
+                    <p><span class="label">Country:</span> Mexico</p>
+                    <p><span class="label">Region:</span> Quintana Roo</p>
+                    <p><span class="label">Population:</span> ~46,000</p>
+                    <p><span class="label">Climate:</span> Tropical</p>
+                    <p><span class="label">Known For:</span> Ruins, turquoise water, cenotes</p>
+                    <p><span class="label">Timezone:</span> EST (UTC‑5)</p>
+                </section>
+
+                <!-- WEATHER CARD -->
+                <section class="card weather">
+                    <h2>Weather</h2>
+
+                    <!-- MOBILE SVG ICON -->
+                    <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon">
+
+                    <p>Temperature: <span id="temperature">82</span> °F</p>
+                    <p>Conditions: Partly Cloudy</p>
+                    <p>Wind: <span id="windSpeed">10</span> mph</p>
+                    <p>Wind Chill: <span id="windChill">N/A</span></p>
+                </section>
+
+            </div> 
+
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentyear"></span> Merari Flores | Salt Lake City, Utah</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </footer>
+    </body>
+
+</html>
