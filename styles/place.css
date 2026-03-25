@@ -11,6 +11,7 @@
 
     --font-heading: "Georgia", serif;
     --font-body: system-ui, sans-serif;
+    color: var(--color-text);
 }
 
 .place-page header {
