@@ -127,5 +127,6 @@
 
     .place-page .weather h2::after {
         content: " ⛅";
+  
     }
 }
