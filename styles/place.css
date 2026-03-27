@@ -13,7 +13,6 @@
 
     --font-heading: "Georgia", serif;
     --font-body: system-ui, sans-serif;
-
 }
 
 .place-page header {
@@ -90,7 +89,7 @@
         width: 210px;
         background-color: var(--color-card-bg) !important;
         /* FIX: solid background */
-        color: var(--color-text);
+        color: var(--color-text) !important;
         /* FIX: dark text */
         /* FIX: readable text */
     }
@@ -103,8 +102,8 @@
 
     /* FIX: ensure headings in data card are readable */
     .place-page .card.data h2 {
-        color: var(--color-navy);
-        background-color: var(--color-card-bg);
+        color: var(--color-navy) !important;
+        background-color: var(--color-card-bg) !important;
     }
 
     .place-page .card.weather {
