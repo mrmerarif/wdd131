@@ -4,8 +4,10 @@
     --color-beige: #e1d9bc;
     --color-gray: #acbac4;
     --color-bg: #f5f3ef;
-    --color-card-bg: rgba(255, 255, 255, 0.85);
-    --color-text: #222;
+    --color-card-bg: #ffffff;
+    /* FIX: solid background for Lighthouse */
+    --color-text: #0b1b2b;
+    /* FIX: dark text for Lighthouse contrast */
 
     --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.14);
 
@@ -46,6 +48,7 @@
 
 .place-page .card {
     background-color: var(--color-card-bg);
+    /* FIX: solid background for Lighthouse */
     padding: .25rem;
     /* FIX: reduces padding to fit content better */
     border-radius: 10px;
@@ -54,6 +57,7 @@
     line-height: 0.85;
     /* fixes the size of the card.*/
     color: var(--color-text);
+    /* FIX: dark text for Lighthouse */
     /* FIX: ensures readable text */
 }
 
@@ -61,9 +65,9 @@
     margin-top: 0;
     font-family: var(--font-heading);
     color: var(--color-navy);
-    /* FIX: dark text for better readability */
+    /* FIX: dark text for contrast */
     background-color: var(--color-card-bg);
-    /* FIX: solid light background so base.css can't darken it */
+    /* FIX: solid background for Lighthouse */
     display: block;
     /* FIX: ensure background covers full heading area */
     padding: 0.25rem 0;
@@ -85,14 +89,16 @@
         left: 1rem;
         width: 210px;
         background-color: var(--color-card-bg);
-        /* FIX: override base.css */
-        color: white;
+        /* FIX: solid background */
+        color: var(--color-text);
+        /* FIX: dark text */
         /* FIX: readable text */
     }
 
     /* FIX: restore readable paragraph text ONLY for data card */
     .place-page .card.data p {
         color: var(--color-text);
+        /* FIX: dark text for Lighthouse */
     }
 
     .place-page .card.weather {
@@ -103,8 +109,10 @@
         /*fixes spacing from right edge of hero image */
         width: 210px;
         background-color: var(--color-card-bg);
+        /* FIX: solid background */
         /* FIX: override base.css */
         color: var(--color-text);
+        /* FIX: dark text */
         /* FIX: readable text */
     }
 
