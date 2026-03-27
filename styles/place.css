@@ -74,6 +74,11 @@
     /* FIX: adds spacing so text is visible */
 }
 
+/* FIX: only when h2 is on dark background */
+.place-page header h2 {
+    color: #ffffff;
+}
+
 .place-page .weather-icon {
     width: 50px;
     margin-bottom: 0.5rem;
@@ -99,6 +104,14 @@
     .place-page .card.data p {
         color: var(--color-text);
         /* FIX: dark text for Lighthouse */
+    }
+
+    /* FIX: ensure no dark-on-dark text sneaks in */
+    .place-page .card.data,
+    .place-page .card.data p,
+    .place-page .card.data h2 {
+        background-color: var(--color-card-bg);
+        color: var(--color-text);
     }
 
     .place-page .card.weather {
