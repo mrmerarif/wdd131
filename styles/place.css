@@ -64,7 +64,7 @@
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
-    color: var(--color-navy);
+    color: #0b1b2b;
     /* FIX: dark text for contrast */
     background-color: #ffffff;
     /* FIX: solid background for Lighthouse */
