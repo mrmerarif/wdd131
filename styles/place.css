@@ -42,6 +42,7 @@
 
 .place-page .hero img {
     width: 100%;
+    height: auto;
     display: block;
     border-bottom: 0.75rem solid var(--color-gray);
 }
