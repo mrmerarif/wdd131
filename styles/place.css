@@ -60,6 +60,37 @@
     /* FIX: ensures readable text */
 }
 
+/* FIX: solid background and readable text for data card */
+.place-page .card.data {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* nearly solid white */
+    color: #0b1b2b;
+    /* dark text for readability */
+    padding: 0.5rem;
+    /* ensures content spacing */
+    border-radius: 10px;
+    /* keeps card styling */
+    box-shadow: var(--shadow-soft);
+    /* keeps card shadow */
+}
+
+/* Ensure headings inside data card remain readable */
+.place-page .card.data h2 {
+    color: #0b1b2b;
+    /* dark heading text */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* matches card background */
+    display: block;
+    /* ensures background covers full heading area */
+    padding: 0.25rem 0;
+    /* spacing for readability */
+}
+
+.place-page .weather-icon {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
@@ -73,11 +104,6 @@
     /* FIX: adds spacing so text is visible */
 }
 
-.place-page .weather-icon {
-    width: 50px;
-    margin-bottom: 0.5rem;
-}
-
 /* DESKTOP FIXES ONLY */
 @media (min-width: 768px) {
 
@@ -87,23 +113,13 @@
         /*Data card spaced from top of hero image */
         left: 1rem;
         width: 210px;
-        background-color: var(--color-card-bg) !important;
-        /* FIX: solid background */
-        color: var(--color-text) !important;
-        /* FIX: dark text */
-        /* FIX: readable text */
+        /* background and color already fixed above */
     }
 
-    /* FIX: restore readable paragraph text ONLY for data card */
+    /* FIX: readable paragraph text in data card */
     .place-page .card.data p {
-        color: var(--color-text) !important;
-        /* FIX: dark text for Lighthouse */
-    }
-
-    /* FIX: ensure headings in data card are readable */
-    .place-page .card.data h2 {
-        color: var(--color-navy) !important;
-        background-color: var(--color-card-bg) !important;
+        color: #0b1b2b;
+        /* dark text on light card background */
     }
 
     .place-page .card.weather {
@@ -127,6 +143,5 @@
 
     .place-page .weather h2::after {
         content: " ⛅";
-  
     }
 }
