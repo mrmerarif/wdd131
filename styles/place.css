@@ -13,6 +13,7 @@
 
     --font-heading: "Georgia", serif;
     --font-body: system-ui, sans-serif;
+
 }
 
 .place-page header {
@@ -46,7 +47,7 @@
 }
 
 .place-page .card {
-    background-color: var(--color-card-bg);
+    background-color: #ffffff;
     /* FIX: solid background for Lighthouse */
     padding: .25rem;
     /* FIX: reduces padding to fit content better */
@@ -60,48 +61,22 @@
     /* FIX: ensures readable text */
 }
 
-/* FIX: solid background and readable text for data card */
-.place-page .card.data {
-    background-color: rgba(255, 255, 255, 0.95);
-    /* nearly solid white */
-    color: #0b1b2b;
-    /* dark text for readability */
-    padding: 0.5rem;
-    /* ensures content spacing */
-    border-radius: 10px;
-    /* keeps card styling */
-    box-shadow: var(--shadow-soft);
-    /* keeps card shadow */
-}
-
-/* Ensure headings inside data card remain readable */
-.place-page .card.data h2 {
-    color: #0b1b2b;
-    /* dark heading text */
-    background-color: rgba(255, 255, 255, 0.95);
-    /* matches card background */
-    display: block;
-    /* ensures background covers full heading area */
-    padding: 0.25rem 0;
-    /* spacing for readability */
-}
-
-.place-page .weather-icon {
-    width: 50px;
-    margin-bottom: 0.5rem;
-}
-
 .place-page .card h2 {
     margin-top: 0;
     font-family: var(--font-heading);
     color: var(--color-navy);
     /* FIX: dark text for contrast */
-    background-color: var(--color-card-bg);
+    background-color: #ffffff;
     /* FIX: solid background for Lighthouse */
     display: block;
     /* FIX: ensure background covers full heading area */
     padding: 0.25rem 0;
     /* FIX: adds spacing so text is visible */
+}
+
+.place-page .weather-icon {
+    width: 50px;
+    margin-bottom: 0.5rem;
 }
 
 /* DESKTOP FIXES ONLY */
@@ -113,13 +88,17 @@
         /*Data card spaced from top of hero image */
         left: 1rem;
         width: 210px;
-        /* background and color already fixed above */
+        background-color: #ffffff;
+        /* FIX: solid background */
+        color: var(--color-text);
+        /* FIX: dark text */
+        /* FIX: readable text */
     }
 
-    /* FIX: readable paragraph text in data card */
+    /* FIX: restore readable paragraph text ONLY for data card */
     .place-page .card.data p {
-        color: #0b1b2b;
-        /* dark text on light card background */
+        color: var(--color-text);
+        /* FIX: dark text for Lighthouse */
     }
 
     .place-page .card.weather {
@@ -129,9 +108,8 @@
         right: 1.25rem;
         /*fixes spacing from right edge of hero image */
         width: 210px;
-        background-color: var(--color-card-bg);
+        background-color: #ffffff;
         /* FIX: solid background */
-        /* FIX: override base.css */
         color: var(--color-text);
         /* FIX: dark text */
         /* FIX: readable text */
