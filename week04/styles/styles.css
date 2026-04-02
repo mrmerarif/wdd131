@@ -1,0 +1,52 @@
+/* Basic page layout */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+}
+
+/* Center images in a single column */
+.lazy-image {
+    display: block;
+    /* required for vertical stacking + centering */
+    margin: 2rem auto;
+    /* centers horizontally */
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    background-color: #000;
+    /* helps the fade-from-black effect */
+
+    /* start fully transparent for animation */
+    opacity: 0;
+    animation: fadeFromBlack 1.2s ease-out forwards;
+}
+
+/* Fade-from-black animation */
+@keyframes fadeFromBlack {
+    0% {
+        opacity: 0;
+        filter: brightness(0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
