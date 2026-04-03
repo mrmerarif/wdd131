@@ -1,0 +1,53 @@
+@media (min-width: 37.5em) {
+
+    #menu {
+        display: none;
+    }
+
+    /* DESKTOP NAV */
+    body.temples .navigation {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+    body.temples .navigation a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        background-color: #236AA3;
+        color: #F0F0DB;
+        min-width: 100px;
+        text-align: center;
+    }
+
+    body.temples .navigation a:hover {
+        background-color: #E1D9BC;
+        color: #30364F;
+        font-weight: bold;
+    }
+
+    /* RESTORE GRID */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 60em) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure {
+        transition: transform 0.2s ease;
+    }
+
+    figure:hover {
+        transform: scale(1.03);
+    }
+}

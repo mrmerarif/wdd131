@@ -1,0 +1,146 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body.temples {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAFAF4;
+    color: #30364F;
+    line-height: 1.6;
+}
+
+/* HEADER */
+body.temples header {
+    background-color: #30364F;
+    color: #F0F0DB;
+    padding: 0.15rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #2978B5;
+    position: relative;
+}
+
+body.temples header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+}
+
+#course-title {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* HAMBURGER BUTTON */
+#menu {
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #F0F0DB;
+    position: absolute;
+    top: 0.35rem;
+    right: 0.75rem;
+    cursor: pointer;
+    display: block;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* NAVIGATION - MOBILE */
+body.temples nav {
+    background-color: #30364F;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+body.temples .navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 .25rem 0 .25rem;
+    width: 100%;
+    align-items: center;
+}
+
+/* MOBILE TABS */
+body.temples .navigation a {
+    display: none;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #F0F0DB;
+    text-align: center;
+    background-color: #236AA3;
+    border-radius: 8px;
+    min-width: 100px;
+    width: 60%;
+    max-width: 150px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.temples .navigation a:hover {
+    background-color: #E1D9BC;
+    color: #30364F;
+    font-weight: bold;
+}
+
+/* SHOW LINKS WHEN NAV HAS OPEN CLASS */
+body.temples nav.open .navigation a {
+    display: block;
+}
+
+/* MAIN */
+body.temples main {
+    max-width: 1100px;
+    margin: 0.75rem auto;
+    padding: 0.75rem;
+}
+
+body.temples main h2 {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* GRID */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+/* FIGURES (kept for safety, even though JS will replace them) */
+figure {
+    background-color: #E1D9BC;
+    padding: 0.6rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+figcaption {
+    margin-top: 0.4rem;
+    font-weight: 600;
+}
+
+/* FOOTER */
+body.temples footer {
+    background-color: #30364F;
+    color: #F0F0DB;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+}

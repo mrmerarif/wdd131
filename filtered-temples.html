@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+            content="A responsive temple photo album created for WDD 131 Dynamic Web Fundamentals, featuring images, filters, and a mobile-friendly layout.">
+
+        <meta name="author" content="Merari Flores">
+
+        <title>WDD 131 | Dynamic Web Fundamentals | Merari Flores</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+        <link rel="stylesheet" href="styles/base.css">
+        <!-- Mobile-first CSS -->
+        <link rel="stylesheet" href="styles/filtered-temples.css">
+        <!-- Larger view CSS -->
+        <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/filtered-temples.js" defer></script>
+    </head>
+
+    <body class="temples">
+        <header>
+            <h1>Temple Album</h1>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
+            <!-- Hamburger button (for mobile) -->
+            <button id="menu" aria-label="Toggle navigation"></button>
+
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" id="filter-old">Old</a></li>
+                    <li><a href="#" id="filter-new">New</a></li>
+                    <li><a href="#" id="filter-large">Large</a></li>
+                    <li><a href="#" id="filter-small">Small</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>My Favorite and Most Special Temples</h2>
+
+            <!-- JavaScript will inject all temple cards here -->
+            <section id="temple-cards" class="temple-grid"></section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Merari Flores | Salt Lake City, UT</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </footer>
+    </body>
+
+</html>
