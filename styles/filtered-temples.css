@@ -62,8 +62,8 @@ body.temples nav {
     padding: 0.5rem 0;
 }
 
-/* FIXED: contrast override (no !important needed) */
-body.temples nav a {
+/* ⭐ FINAL FIX: stronger selector to override base.css */
+body.temples header nav a {
     color: #F0F0DB;
 }
 
