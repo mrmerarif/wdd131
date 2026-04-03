@@ -28,8 +28,8 @@ body.temples header h1 {
     margin-bottom: 0.1rem;
 }
 
-/* FIXED: renamed to avoid conflict with base.css */
-#course-title-temples {
+/* FIXED: custom styling for course title without conflicting with base.css */
+body.temples #course-title {
     font-size: 1.25rem;
     opacity: 0.9;
 }
@@ -62,6 +62,11 @@ body.temples nav {
     padding: 0.5rem 0;
 }
 
+/* FIXED: contrast override (no !important needed) */
+body.temples nav a {
+    color: #F0F0DB;
+}
+
 body.temples .navigation {
     list-style: none;
     display: flex;
@@ -70,11 +75,6 @@ body.temples .navigation {
     padding: 0 .25rem 0 .25rem;
     width: 100%;
     align-items: center;
-}
-
-/* FIXED: contrast override */
-body.temples nav a {
-    color: #F0F0DB !important;
 }
 
 /* MOBILE TABS */
