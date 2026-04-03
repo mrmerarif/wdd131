@@ -28,7 +28,8 @@ body.temples header h1 {
     margin-bottom: 0.1rem;
 }
 
-#course-title {
+/* FIXED: renamed to avoid conflict with base.css */
+#course-title-temples {
     font-size: 1.25rem;
     opacity: 0.9;
 }
@@ -71,14 +72,17 @@ body.temples .navigation {
     align-items: center;
 }
 
+/* FIXED: contrast override */
+body.temples nav a {
+    color: #F0F0DB !important;
+}
+
 /* MOBILE TABS */
 body.temples .navigation a {
     display: none;
     padding: 0.4rem 0.75rem;
     font-size: 0.9rem;
     text-decoration: none;
-    color: #F0F0DB;
-    text-align: center;
     background-color: #236AA3;
     border-radius: 8px;
     min-width: 100px;
@@ -117,7 +121,7 @@ body.temples main h2 {
     gap: 1.25rem;
 }
 
-/* FIGURES (kept for safety, even though JS will replace them) */
+/* FIGURES */
 figure {
     background-color: #E1D9BC;
     padding: 0.6rem;

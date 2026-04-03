@@ -1,10 +1,11 @@
+/* Tablet and up */
 @media (min-width: 37.5em) {
 
     #menu {
         display: none;
     }
 
-    /* DESKTOP NAV */
+    /* Desktop Navigation */
     body.temples .navigation {
         flex-direction: row;
         justify-content: center;
@@ -31,14 +32,16 @@
         font-weight: bold;
     }
 
-    /* RESTORE GRID */
+    /* Tablet Grid */
     .temple-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 }
 
+/* Desktop and up */
 @media (min-width: 60em) {
+
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
     }
