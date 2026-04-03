@@ -58,16 +58,18 @@ body.temples #course-title {
 /* NAVIGATION - MOBILE */
 body.temples nav {
     background-color: #30364F;
+    color: #F0F0DB !important;
+    /* ✅ FIX: force light text for ALL nav content */
     width: 100%;
     padding: 0.5rem 0;
 }
 
-/* ✅ FIXED: ensure all link states stay light for accessibility */
+/* Ensure links also stay light */
 body.temples header nav a,
 body.temples header nav a:link,
 body.temples header nav a:visited,
 body.temples header nav a:active {
-    color: #F0F0DB;
+    color: #F0F0DB !important;
 }
 
 body.temples .navigation {
