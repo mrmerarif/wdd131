@@ -62,8 +62,11 @@ body.temples nav {
     padding: 0.5rem 0;
 }
 
-/* ⭐ FINAL FIX: stronger selector to override base.css */
-body.temples header nav a {
+/* ✅ FIXED: ensure all link states stay light for accessibility */
+body.temples header nav a,
+body.temples header nav a:link,
+body.temples header nav a:visited,
+body.temples header nav a:active {
     color: #F0F0DB;
 }
 
