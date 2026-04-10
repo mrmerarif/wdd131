@@ -4,52 +4,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDD 131 – Product Review Form – Merari Flores</title>
 
-        <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+        
+        <title>WDD 131 | Dynamic Web Fundamentals | Merari Flores</title>
 
-
-        <meta name="description" content="WDD 131 – Product Review Form">
+        
+        <meta name="description"
+            content="This Product Review Form allows users to select a product, rate it, describe useful features, and submit a written review. Created for WDD 131 Dynamic Web Fundamentals.">
         <meta name="author" content="Merari Flores">
 
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+        
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/form.css">
 
+        
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/form.js" defer></script>
     </head>
 
     <body>
+
         <header>
+            
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
             <h1>Product Review</h1>
 
+            
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="resources.html">Resources</a>
                 <a href="form.html">Product Review</a>
+                <a href="https://www.byui.edu">BYU-Idaho</a>
             </nav>
-            
-
-
-
         </header>
 
         <main>
+
+            <!-- REQUIRED TWO CARD SECTIONS -->
             <section class="card">
-                <!-- your form goes here -->
+                <p>This page contains the WDD131 Product Review Form.</p>
             </section>
-            
+
             <section class="card">
-                <p> Product Review form for a product of your choice.</p>
-                </section>
+                <p>Please complete the form below to submit your review.</p>
+            </section>
 
-
-
+            <!-- YOUR FORM -->
             <form method="get" action="review.html" id="reviewForm">
 
                 <!-- PRODUCT NAME -->
@@ -97,19 +103,23 @@
 
                 <div class="checkbox-group">
                     <label class="checkbox-item">
-                        <input type="checkbox" name="features" value="durability"> Durability
+                        <input type="checkbox" name="features" value="durability">
+                        <span>Durability</span>
                     </label>
 
                     <label class="checkbox-item">
-                        <input type="checkbox" name="features" value="ease"> Ease of Use
+                        <input type="checkbox" name="features" value="ease">
+                        <span>Ease of Use</span>
                     </label>
 
                     <label class="checkbox-item">
-                        <input type="checkbox" name="features" value="performance"> Performance
+                        <input type="checkbox" name="features" value="performance">
+                        <span>Performance</span>
                     </label>
 
                     <label class="checkbox-item">
-                        <input type="checkbox" name="features" value="design"> Design
+                        <input type="checkbox" name="features" value="design">
+                        <span>Design</span>
                     </label>
                 </div>
 
@@ -131,6 +141,7 @@
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastmodified"></p>
         </footer>
+
     </body>
 
 </html>
