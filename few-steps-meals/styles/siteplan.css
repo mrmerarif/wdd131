@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color variables */
+:root {
+    --primary: #1A2A40;
+    --secondary: #B6B09F;
+    --card-bg: #EAE4D5;
+    --page-bg: #F2F2F2;
+}
+
+/* Body */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--page-bg);
+    color: var(--primary);
+    line-height: 1.6;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+/* Layout */
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--primary);
+}
+
+header .subtitle {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Sections */
+main section {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+main h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    margin: 1rem 0 0.5rem;
+}
+
+/* Text */
+p {
+    margin-bottom: 0.75rem;
+    font-size: 0.98rem;
+}
+
+ul {
+    margin-left: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+/* Color grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.color-swatch {
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.color-swatch .color-name {
+    font-weight: 700;
+}
+
+.color-swatch .color-code {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.9rem;
+}
+
+.color-swatch.primary {
+    background-color: var(--primary);
+    color: #F2F2F2;
+}
+
+.color-swatch.secondary {
+    background-color: var(--secondary);
+}
+
+.color-swatch.card-bg {
+    background-color: var(--card-bg);
+}
+
+.color-swatch.page-bg {
+    background-color: var(--page-bg);
+}
+
+/* Typography samples */
+.font-sample-heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.font-sample-body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Wireframes */
+.wireframe {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 0.75rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
