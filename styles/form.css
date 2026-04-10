@@ -1,0 +1,131 @@
+/* ============================
+   FORM PAGE — ISOLATED STYLES
+   ============================ */
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Center header title */
+header h1 {
+    text-align: center;
+}
+
+/* Form container box */
+#reviewForm {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels above inputs */
+#reviewForm label {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 1rem;
+}
+
+/* Inputs, selects, textarea */
+#reviewForm input[type="text"],
+#reviewForm input[type="date"],
+#reviewForm select,
+#reviewForm textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.65rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/* ============================
+   RATING STARS (WIRE FRAME STYLE)
+   ============================ */
+
+.rating-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.rating-option input[type="radio"] {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+}
+
+.stars {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* ============================
+   CHECKBOXES — FIXED
+   ============================ */
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* THIS is the fix — forces checkbox + text on one line */
+.checkbox-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Optional text */
+.optional {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.75rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Desktop spacing */
+@media (min-width: 740px) {
+    main {
+        max-width: 800px;
+    }
+}
