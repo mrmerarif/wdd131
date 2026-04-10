@@ -28,7 +28,7 @@ body.temples header h1 {
     margin-bottom: 0.1rem;
 }
 
-/* FIXED: custom styling for course title without conflicting with base.css */
+
 body.temples #course-title {
     font-size: 1.25rem;
     opacity: 0.9;
