@@ -2,7 +2,8 @@
    FORM PAGE — ISOLATED STYLES
    ============================ */
 
-main {
+/* FIXED: renamed from main → .form-main to avoid repeated rule conflict */
+.form-main {
     max-width: 700px;
     margin: 0 auto;
     padding: 1.5rem;
@@ -125,7 +126,7 @@ header h1 {
 
 /* Desktop spacing */
 @media (min-width: 740px) {
-    main {
+    .form-main {
         max-width: 800px;
     }
 }
