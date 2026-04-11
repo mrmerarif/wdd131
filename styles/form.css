@@ -49,7 +49,7 @@ header h1 {
 }
 
 /* ============================
-   RATING STARS (WIRE FRAME STYLE)
+   RATING STARS 
    ============================ */
 
 .rating-row {
@@ -87,7 +87,7 @@ header h1 {
     gap: 0.75rem;
 }
 
-/* THIS is the fix — forces checkbox + text on one line */
+/* This forces checkbox + text on one line */
 .checkbox-item {
     display: flex !important;
     flex-direction: row !important;
@@ -100,7 +100,7 @@ header h1 {
     height: 18px;
 }
 
-/* Optional text */
+
 .optional {
     font-weight: 300;
     font-size: 0.9rem;
