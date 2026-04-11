@@ -5,25 +5,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        
         <title>WDD 131 | Dynamic Web Fundamentals | Merari Flores</title>
 
-        
         <meta name="description"
             content="This Product Review Form lets users choose a product, rate it, select useful features, and submit a review. Created for WDD 131 Dynamic Web Fundamentals.">
->
+
         <meta name="author" content="Merari Flores">
 
-        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-        
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/form.css">
 
-        
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/form.js" defer></script>
     </head>
@@ -31,12 +26,10 @@
     <body>
 
         <header>
-            
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
 
             <h1>Product Review</h1>
 
-            
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -45,9 +38,8 @@
             </nav>
         </header>
 
-        <main>
+        <main class="form-main">
 
-            <!-- REQUIRED TWO CARD SECTIONS -->
             <section class="card">
                 <p>This page contains the WDD131 Product Review Form.</p>
             </section>
@@ -56,16 +48,13 @@
                 <p>Please complete the form below to submit your review.</p>
             </section>
 
-            <!-- YOUR FORM -->
             <form method="get" action="review.html" id="reviewForm">
 
-                <!-- PRODUCT NAME -->
                 <label for="productName">Product Name</label>
                 <select id="productName" name="productName" required>
                     <option value="" disabled selected>Select a Product ...</option>
                 </select>
 
-                <!-- OVERALL RATING -->
                 <p>Overall Rating</p>
 
                 <div class="rating-row">
@@ -95,11 +84,9 @@
                     </label>
                 </div>
 
-                <!-- INSTALL DATE -->
                 <label for="installDate">Date of Installation</label>
                 <input type="date" id="installDate" name="installDate" required>
 
-                <!-- USEFUL FEATURES -->
                 <label>Which features did you find useful? <span class="optional">(check all that apply)</span></label>
 
                 <div class="checkbox-group">
@@ -124,15 +111,12 @@
                     </label>
                 </div>
 
-                <!-- WRITTEN REVIEW -->
                 <label for="reviewText">Written Review <span class="optional">(Optional)</span></label>
                 <textarea id="reviewText" name="reviewText" rows="5"></textarea>
 
-                <!-- USER NAME -->
                 <label for="userName">Your Name <span class="optional">(Optional)</span></label>
                 <input type="text" id="userName" name="userName">
 
-                <!-- SUBMIT -->
                 <input type="submit" value="Post Review" class="submit-btn">
 
             </form>

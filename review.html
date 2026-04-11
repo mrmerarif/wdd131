@@ -4,7 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Review Submitted</title>
+
+        <title>WDD 131 | Dynamic Web Fundamentals | Review Submitted</title>
+
+        <meta name="description"
+            content="Confirmation page for the WDD 131 Product Review Form. Displays the total number of reviews submitted using localStorage.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/form.css">
@@ -14,11 +23,20 @@
     </head>
 
     <body>
+
         <header>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
             <h1>Thank You!</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="form.html">Product Review</a>
+                <a href="https://www.byui.edu">BYU-Idaho</a>
+            </nav>
         </header>
 
-        <main>
+        <main class="form-main">
             <p>Your review has been submitted.</p>
             <p>Total reviews submitted: <span id="reviewCount"></span></p>
         </main>
@@ -27,6 +45,7 @@
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastModified"></p>
         </footer>
+
     </body>
 
 </html>
