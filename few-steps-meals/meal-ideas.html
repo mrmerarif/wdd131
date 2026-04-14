@@ -4,39 +4,100 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meal Ideas | Few Steps Meals</title>
+
+        <title>Meal Ideas – Few Steps Meals by Merari Flores</title>
+
+        <meta name="description"
+            content="Generate simple, budget-friendly meal ideas with just one click. Save your favorites for later.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
+    <body class="fsm-home">
 
+        <!-- =========================
+         HEADER (IDENTICAL TO HOME)
+    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="meal-ideas.html">Meal Ideas</a></li>
-                    <li><a href="tips.html">Tips & Tricks</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
             </nav>
         </header>
 
-        <main>
-            <h2>Meal Ideas</h2>
-            <p>Future curated lists will go here, such as 10 meals under $5, 5‑ingredient dinners, 15‑minute meals, and
-                more.</p>
+        <!-- =========================
+         PAGE TITLE + INTRO
+    ========================== -->
+        <main class="fsm-mealideas">
+
+            <section class="hero">
+                <div>
+                    <h2>Quick Meal Ideas</h2>
+                    <p>Need inspiration? Generate simple, fast, budget-friendly meal ideas with one click. Save your
+                        favorites for later.</p>
+                </div>
+
+                <img src="images/meal-ideas-hero.jpg" alt="Fresh ingredients ready for cooking" loading="lazy">
+            </section>
+
+            <!-- =========================
+             MEAL IDEA GENERATOR
+        ========================== -->
+            <section class="card meal-ideas-preview">
+                <h3>Need a quick idea?</h3>
+                <p>Tap the button to get a simple meal idea in just a few steps.</p>
+
+                <!-- BUTTONS (STACKED, CLEAN, RESPONSIVE) -->
+                <button id="generate-idea-btn" class="cta-btn secondary">Generate a Meal Idea</button>
+
+                <div id="meal-idea-output"></div>
+
+                <button id="save-idea-btn" class="cta-btn tertiary">Save This Idea</button>
+
+                <p class="saved-ideas-note">Saved ideas: <span id="saved-ideas-count">0</span></p>
+            </section>
+
+            <!-- =========================
+             SAVED IDEAS LIST
+        ========================== -->
+            <section class="card">
+                <h3>Your Saved Meal Ideas</h3>
+                <p>These ideas are stored in your browser using localStorage.</p>
+
+                <ul id="saved-ideas-list" class="saved-ideas-list">
+                    <!-- JS will populate saved ideas here -->
+                </ul>
+            </section>
+
         </main>
 
+        <!-- =========================
+         FOOTER (IDENTICAL TO HOME)
+    ========================== -->
         <footer>
-            <p>&copy; <span id="year"></span> Few Steps Meals | <a href="references.html">References</a></p>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
         </footer>
 
-        <script src="scripts/main.js"></script>
     </body>
 
 </html>

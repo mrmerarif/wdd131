@@ -4,38 +4,119 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tips & Tricks | Few Steps Meals</title>
+
+        <title>Tips & Tricks – Few Steps Meals by Merari Flores</title>
+
+        <meta name="description"
+            content="Simple cooking tips, kitchen tricks, and time-saving ideas to make everyday meals easier.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
+    <body class="fsm-home">
 
+        <!-- =========================
+         HEADER (IDENTICAL TO HOME)
+    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="meal-ideas.html">Meal Ideas</a></li>
-                    <li><a href="tips.html">Tips & Tricks</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
             </nav>
         </header>
 
-        <main>
-            <h2>Tips & Tricks</h2>
-            <p>Future cooking tips, ingredient substitutions, and budget hacks will appear here.</p>
+        <!-- =========================
+         PAGE TITLE + INTRO
+    ========================== -->
+        <main class="fsm-tips">
+
+            <section class="hero">
+                <div>
+                    <h2>Tips & Tricks</h2>
+                    <p>Quick, practical kitchen tips to help you cook smarter, save time, and make meals taste better.
+                    </p>
+                </div>
+
+                <img src="images/tips-hero.jpg" alt="Kitchen tools and ingredients arranged neatly" loading="lazy">
+            </section>
+
+            <!-- =========================
+             TIPS GRID
+        ========================== -->
+            <section class="featured-row">
+
+                <!-- TIP 1 -->
+                <article class="card specialty-card">
+                    <h3>Prep Ingredients First</h3>
+                    <p>Chop, measure, and prepare everything before cooking — it keeps the process smooth and
+                        stress-free.</p>
+                </article>
+
+                <!-- TIP 2 -->
+                <article class="card specialty-card">
+                    <h3>Season as You Go</h3>
+                    <p>Adding small amounts of salt and seasoning throughout cooking builds deeper, balanced flavor.</p>
+                </article>
+
+                <!-- TIP 3 -->
+                <article class="card specialty-card">
+                    <h3>Use Pasta Water</h3>
+                    <p>Save a cup of pasta water — its starch helps sauces stick and creates a silky texture.</p>
+                </article>
+
+            </section>
+
+            <section class="featured-row">
+
+                <!-- TIP 4 -->
+                <article class="card specialty-card">
+                    <h3>Don’t Overcrowd the Pan</h3>
+                    <p>Food needs space to brown properly — overcrowding traps steam and makes ingredients soggy.</p>
+                </article>
+
+                <!-- TIP 5 -->
+                <article class="card specialty-card">
+                    <h3>Let Meat Rest</h3>
+                    <p>Allow cooked meat to rest for a few minutes so juices redistribute and stay inside.</p>
+                </article>
+
+                <!-- TIP 6 -->
+                <article class="card specialty-card">
+                    <h3>Keep Pantry Staples Ready</h3>
+                    <p>Rice, beans, pasta, broth, and spices make it easy to cook last-minute meals without stress.</p>
+                </article>
+
+            </section>
+
         </main>
 
+        <!-- =========================
+         FOOTER (IDENTICAL TO HOME)
+    ========================== -->
         <footer>
-            <p>&copy; <span id="year"></span> Few Steps Meals | <a href="references.html">References</a></p>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
         </footer>
 
-        <script src="scripts/main.js"></script>
     </body>
 
 </html>

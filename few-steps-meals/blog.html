@@ -4,42 +4,123 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog | Few Steps Meals</title>
+
+        <title>Blog – Few Steps Meals by Merari Flores</title>
+
+        <meta name="description"
+            content="Cooking tips, budget-friendly ideas, kitchen hacks, and simple inspiration from Few Steps Meals.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
+    <body class="fsm-home">
 
+        <!-- =========================
+         HEADER (IDENTICAL TO HOME)
+    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="meal-ideas.html">Meal Ideas</a></li>
-                    <li><a href="tips.html">Tips & Tricks</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
             </nav>
         </header>
 
-        <main>
-            <h2>Blog</h2>
-            <p>Tips, ideas, and thoughts about cooking on a budget.</p>
+        <!-- =========================
+         PAGE TITLE + INTRO
+    ========================== -->
+        <main class="fsm-blog">
 
-            <section id="blog-posts">
-                <!-- Future blog posts will go here -->
+            <section class="hero">
+                <div>
+                    <h2>Cooking Tips & Inspiration</h2>
+                    <p>Short, helpful posts to make cooking easier, faster, and more enjoyable — even on a budget.</p>
+                </div>
+
+                <img src="images/blog-hero.jpg" alt="Notebook with cooking ideas and ingredients" loading="lazy">
             </section>
+
+            <!-- =========================
+             BLOG GRID
+        ========================== -->
+            <section class="featured-row">
+
+                <!-- BLOG POST 1 -->
+                <article class="card specialty-card">
+                    <h3>5 Ways to Save Money on Groceries</h3>
+                    <p>Learn simple strategies to stretch your budget without sacrificing flavor or nutrition.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+                <!-- BLOG POST 2 -->
+                <article class="card specialty-card">
+                    <h3>How to Build a 10‑Minute Meal</h3>
+                    <p>A quick formula you can use to create fast meals from whatever you already have at home.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+                <!-- BLOG POST 3 -->
+                <article class="card specialty-card">
+                    <h3>Pantry Staples You Should Always Have</h3>
+                    <p>These ingredients make it easy to cook last‑minute meals without stress.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+            </section>
+
+            <section class="featured-row">
+
+                <!-- BLOG POST 4 -->
+                <article class="card specialty-card">
+                    <h3>Beginner‑Friendly Knife Skills</h3>
+                    <p>Improve your confidence and speed in the kitchen with these simple cutting techniques.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+                <!-- BLOG POST 5 -->
+                <article class="card specialty-card">
+                    <h3>How to Season Food Like a Pro</h3>
+                    <p>Salt, acid, fat, and heat — learn how to balance flavors in every dish.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+                <!-- BLOG POST 6 -->
+                <article class="card specialty-card">
+                    <h3>Healthy Swaps for Everyday Meals</h3>
+                    <p>Easy ingredient substitutions that boost nutrition without changing the taste you love.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </article>
+
+            </section>
+
         </main>
 
+        <!-- =========================
+         FOOTER (IDENTICAL TO HOME)
+    ========================== -->
         <footer>
-            <p>&copy; <span id="year"></span> Few Steps Meals | <a href="references.html">References</a></p>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
         </footer>
 
-        <script src="scripts/main.js"></script>
     </body>
 
 </html>

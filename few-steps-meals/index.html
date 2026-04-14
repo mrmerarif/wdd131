@@ -4,43 +4,142 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Few Steps Meals</title>
+
+        <title>WDD 131 – Dynamic Web Fundamentals – Few Steps Meals by Merari Flores</title>
+
+        <meta name="description"
+            content="Few Steps Meals by Merari Flores offers simple, budget-friendly recipes, quick meal ideas, and easy cooking inspiration for real life.">
+        <meta name="author" content="Merari Flores">
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/main.css">
+
+        
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
+    <body class="fsm-home">
 
         <header>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
             <h1>Few Steps Meals</h1>
+
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="meal-ideas.html">Meal Ideas</a></li>
-                    <li><a href="tips.html">Tips & Tricks</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="index.html" class="active">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
             </nav>
         </header>
 
-        <main>
-            <h2>Simple Meals, Few Steps</h2>
-            <p>Easy recipes with 5–10 ingredients for real life.</p>
+       
+        <main class="fsm-home">
 
-            <div class="cta-container">
-                <a href="submit.html" class="cta">Share a Recipe</a>
-                <a href="submit.html#video" class="cta secondary">Share a Video</a>
-            </div>
+            
+            <section class="cta-section">
+                <div class="cta-grid">
+                    <button class="cta-btn primary" id="cta-share-recipe">Share a Recipe</button>
+                    <button class="cta-btn primary" id="cta-share-video">Share a Video</button>
+                    <button class="cta-btn secondary" id="cta-browse-recipes">Browse Recipes</button>
+                    <button class="cta-btn secondary" id="cta-meal-ideas">Meal Ideas Generator</button>
+                </div>
+            </section>
+
+            
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>Simple, budget-friendly recipes anyone can make</h2>
+                    <p>Few Steps Meals focuses on quick, affordable dishes with clear, easy steps. Perfect for busy
+                        days,
+                        tight budgets, and real life.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-kitchen.jpg" alt="Cozy kitchen counter with ingredients ready to cook"
+                        loading="lazy">
+                </div>
+            </section>
+
+            
+            <section class="highlight-row">
+                <article class="card recipe-of-day">
+                    <h3>Recipe of the Day</h3>
+                    <div id="recipe-of-day-content"></div>
+                </article>
+
+                <article class="card meal-ideas-preview">
+                    <h3>Need a quick idea?</h3>
+                    <p>Tap the button to get a simple meal idea in just a few steps.</p>
+                    <button id="generate-idea-btn" class="cta-btn secondary">Generate a Meal Idea</button>
+                    <div id="meal-idea-output"></div>
+                    <button id="save-idea-btn" class="cta-btn tertiary">Save This Idea</button>
+                    <p class="saved-ideas-note">Saved ideas: <span id="saved-ideas-count">0</span></p>
+                </article>
+            </section>
+
+            <!-- FEATURED RECIPES ROW 1 -->
+            <section class="featured-row">
+                <article class="card" id="most-popular-card">
+                    <h3>Most Popular Recipe</h3>
+                    <div class="card-body" id="most-popular-content"></div>
+                </article>
+
+                <article class="card" id="budget-week-card">
+                    <h3>Budget Meal of the Week</h3>
+                    <div class="card-body" id="budget-week-content"></div>
+                </article>
+
+                <article class="card" id="quick-five-card">
+                    <h3>Quick 5-Minute Idea</h3>
+                    <div class="card-body" id="quick-five-content"></div>
+                </article>
+            </section>
+
+            <!-- BRAND DIVIDER -->
+            <section class="brand-divider">
+                <h2>Few Steps Meals</h2>
+                <p>Simple, budget-friendly recipes anyone can make.</p>
+            </section>
+
+            <!-- SPECIALTY ROW 2 -->
+            <section class="specialty-row">
+
+                <article class="card specialty-card" id="five-ingredient-card">
+                    <h3>5-Ingredient Magic</h3>
+                    <div class="specialty-body" id="five-ingredient-content"></div>
+                </article>
+
+                <article class="card specialty-card" id="five-ten-card">
+                    <h3>5–10 Ingredient Favorites</h3>
+                    <div class="specialty-body" id="five-ten-content"></div>
+                </article>
+
+                <article class="card specialty-card" id="special-recipes-card">
+                    <div class="badge">Weekend Special</div>
+                    <h3>Special Recipes, More Flavor</h3>
+                    <div class="specialty-body" id="special-recipes-content"></div>
+                </article>
+
+            </section>
+
         </main>
 
         <footer>
-            <p>&copy; <span id="year"></span> Few Steps Meals | <a href="references.html">References</a></p>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
         </footer>
 
-        <script src="scripts/main.js"></script>
     </body>
 
 </html>

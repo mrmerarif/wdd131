@@ -1,0 +1,275 @@
+/* =========================
+   FEW STEPS MEALS — CLEAN + STABLE + GLOBAL PALETTE
+   ========================= */
+
+:root {
+    --fsm-primary: #2B2B2B;
+    /* Header/Footer charcoal */
+    --fsm-secondary: #FFFFFF;
+    /* Pure white background */
+    --fsm-accent: #A83226;
+    /* Deep paprika (more red) */
+    --fsm-accent-2: #F2C14E;
+    /* Saffron accents */
+    --fsm-accent-3: #2B2B2B;
+    /* Text accents */
+    --fsm-card-bg: #F5F5F5;
+    /* Soft neutral gray for boxes */
+}
+
+/* =========================
+   GLOBAL TEXT CENTERING
+   ========================= */
+
+body.fsm-home h1,
+body.fsm-home h2,
+body.fsm-home h3,
+body.fsm-home h4,
+body.fsm-home h5,
+body.fsm-home h6,
+body.fsm-home p {
+    text-align: center !important;
+}
+
+/* =========================
+   PAGE BACKGROUND
+   ========================= */
+
+body.fsm-home {
+    background: var(--fsm-secondary) !important;
+    color: var(--fsm-accent-3);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+body.fsm-home header {
+    background-color: var(--fsm-primary) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 1.2rem 0 !important;
+}
+
+body.fsm-home header h1 {
+    margin: 0.3rem 0 !important;
+    color: white !important;
+}
+
+body.fsm-home #course-title {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: white !important;
+}
+
+/* =========================
+   NAV LAYOUT
+   ========================= */
+
+body.fsm-home header nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 1rem 1.5rem !important;
+}
+
+/* =========================
+   NAV BUTTONS — DEEP PAPRIKA
+   ========================= */
+
+body.fsm-home header nav a {
+    background: var(--fsm-accent) !important;
+    color: white !important;
+    padding: 0.55rem 1.25rem !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+body.fsm-home header nav a:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+body.fsm-home footer {
+    background-color: var(--fsm-primary) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 1.2rem 0 !important;
+}
+
+body.fsm-home footer p {
+    margin: 0.25rem 0 !important;
+}
+
+body.fsm-home footer a {
+    color: white !important;
+    text-decoration: underline;
+}
+
+/* =========================
+   GLOBAL CTA BUTTON STYLE
+   ========================= */
+
+.fsm-home .cta-btn {
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 999px !important;
+    border: none !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    background-color: var(--fsm-accent) !important;
+    color: white !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.fsm-home .cta-btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =========================
+   TOP CTA ROW (4 BUTTONS) — RESTORED
+   ========================= */
+
+.fsm-home .cta-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 0.75rem !important;
+    margin: 1rem 0 !important;
+}
+
+.fsm-home .cta-grid .cta-btn {
+    flex: 1 1 200px !important;
+    text-align: center !important;
+}
+
+/* =========================
+   BADGES — SAFFRON
+   ========================= */
+
+.fsm-home .specialty-card .badge {
+    background-color: var(--fsm-accent-2) !important;
+    color: var(--fsm-primary) !important;
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.fsm-home {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+}
+
+.fsm-home .hero {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 1.75rem !important;
+    align-items: center !important;
+    background-color: var(--fsm-card-bg) !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+}
+
+.fsm-home .highlight-row {
+    display: grid !important;
+    grid-template-columns: 1.4fr 1fr !important;
+    gap: 1.75rem !important;
+}
+
+.fsm-home .featured-row,
+.fsm-home .specialty-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.75rem !important;
+}
+
+.fsm-home .card,
+.fsm-home .specialty-card {
+    background-color: var(--fsm-card-bg) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ============================================================
+   FIX ONLY THE TWO BUTTONS IN .card.meal-ideas-preview
+   ============================================================ */
+
+/* Make the card a clean vertical layout */
+.card.meal-ideas-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Make both buttons same width and centered */
+.card.meal-ideas-preview #generate-idea-btn,
+.card.meal-ideas-preview #save-idea-btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Add spacing between them */
+.card.meal-ideas-preview #generate-idea-btn {
+    margin-top: 0.5rem;
+}
+
+.card.meal-ideas-preview #save-idea-btn {
+    margin-bottom: 0.5rem;
+}
+
+/* MOBILE FIX — stays vertical, looks clean */
+@media (max-width: 900px) {
+
+    .card.meal-ideas-preview #generate-idea-btn,
+    .card.meal-ideas-preview #save-idea-btn {
+        max-width: 100%;
+    }
+}
+
+.saved-ideas-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.saved-ideas-list li {
+    background: var(--fsm-card-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-idea-btn {
+    background: var(--fsm-accent);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
