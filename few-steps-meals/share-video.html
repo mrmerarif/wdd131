@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Share a Video – Few Steps Meals</title>
+
+        <meta name="description" content="Share your cooking video with the Few Steps Meals community.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
+    </head>
+
+    <body class="fsm-home">
+
+        <header>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+            <h1>Few Steps Meals</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
+            </nav>
+        </header>
+
+        <main class="fsm-home">
+
+            <section class="hero-full small-hero">
+                <img src="images/kids-helping-small.webp" alt="Kids helping in the kitchen" loading="lazy" width="1600"
+                    height="600" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
+                    <h2>Share Your Cooking Video</h2>
+                    <p>Inspire others with your step‑by‑step cooking video.</p>
+                </div>
+            </section>
+
+            <section class="form-card">
+                <h2>Share a Video</h2>
+                <p>Upload a cooking video or share a link to your recipe video.</p>
+
+                <form>
+                    <fieldset>
+                        <label for="video-title">Video Title</label>
+                        <input type="text" id="video-title" name="video-title" required>
+
+                        <label for="video-link">Video Link (YouTube, TikTok, Instagram)</label>
+                        <input type="url" id="video-link" name="video-link" placeholder="https://example.com/video"
+                            required>
+
+                        <label for="video-file" class="file-label">Upload Video File</label>
+                        <input type="file" id="video-file" name="video-file" accept="video/*">
+
+                        <label for="description">Short Description</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Tell us about your video..."
+                            required></textarea>
+                    </fieldset>
+
+                    <button type="submit" class="cta-btn primary">Share Video</button>
+                </form>
+            </section>
+
+        </main>
+
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <footer>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
+        </footer>
+
+    </body>
+
+</html>

@@ -8,7 +8,7 @@
         <title>About – Few Steps Meals by Merari Flores</title>
 
         <meta name="description"
-            content="Learn about the creator of Few Steps Meals, the mission behind the project, and the purpose of helping others cook simple, budget-friendly meals.">
+            content="Learn about the purpose behind Few Steps Meals — simple, practical cooking made for real life.">
         <meta name="author" content="Merari Flores">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,14 +19,11 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/main.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
     </head>
 
     <body class="fsm-home">
 
-        <!-- =========================
-         HEADER (IDENTICAL TO HOME)
-    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
@@ -38,90 +35,48 @@
                 <a href="categories.html">Categories</a>
                 <a href="blog.html">Blog</a>
                 <a href="tips.html">Tips</a>
-                <a href="about.html">About</a>
+                <a href="about.html" class="active">About</a>
                 <a href="references.html">References</a>
             </nav>
         </header>
 
-        <!-- =========================
-         ABOUT PAGE CONTENT
-    ========================== -->
-        <main class="fsm-about">
+        <main class="fsm-home fsm-about">
 
-            <section class="hero">
-                <div>
+            
+            <section class="hero-full">
+                <img src="images/veggies1-small.webp" alt="Cooking ingredients and tools arranged neatly" loading="lazy"
+                    width="1600" height="1000" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
                     <h2>About Few Steps Meals</h2>
-                    <p>A simple, practical cooking project created to help busy people, students, missionaries, and
-                        families
-                        make delicious meals without stress or complicated ingredients.</p>
+                    <p>Simple, practical cooking made for real life.</p>
                 </div>
-
-                <img src="images/about-hero.jpg" alt="Cooking ingredients arranged on a kitchen counter" loading="lazy">
             </section>
 
-            <!-- =========================
-             ABOUT THE CREATOR
-        ========================== -->
-            <section class="card">
-                <h3>Hi, I'm Merari Flores</h3>
-                <p>I created Few Steps Meals as part of my WDD 131 course, but also as a personal project inspired by
-                    real
-                    life — tight budgets, busy schedules, and the need for meals that are fast, affordable, and actually
-                    taste good.</p>
+            
+            <section class="card about-content">
+                <h3>Why This Site Exists</h3>
+                <p>Few Steps Meals was created with one goal in mind: to make cooking easier, faster, and more
+                    approachable for everyone — no complicated steps, no long ingredient lists, just real food made
+                    simple.</p>
 
-                <p>I love cooking simple dishes that don’t require fancy tools or expensive ingredients. My goal is to
-                    help
-                    others feel confident in the kitchen, even if they’re just starting out or cooking on a budget.</p>
-
-                <img src="images/about-profile.jpg" alt="Merari cooking in the kitchen" loading="lazy"
-                    style="max-width: 300px; margin: 1rem auto; border-radius: 12px;">
-            </section>
-
-            <!-- =========================
-             PROJECT PURPOSE
-        ========================== -->
-            <section class="card">
-                <h3>Why This Project Exists</h3>
-                <p>Few Steps Meals was built to support people who need:</p>
-
-                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <li>✔ Simple recipes with clear steps</li>
-                    <li>✔ Budget-friendly ingredients</li>
-                    <li>✔ Quick meals for busy days</li>
-                    <li>✔ Easy meal ideas when they don’t know what to cook</li>
-                    <li>✔ A clean, friendly website that’s easy to navigate</li>
-                </ul>
-
-                <p>This project also demonstrates my skills in HTML, CSS, JavaScript, responsive design, accessibility,
-                    and
-                    dynamic content creation.</p>
-            </section>
-
-            <!-- =========================
-             COURSE + TECH DETAILS
-        ========================== -->
-            <section class="card">
-                <h3>Built for WDD 131</h3>
-                <p>This website was created as the final project for WDD 131 – Dynamic Web Fundamentals. It includes:
+                <h3>Where Passion Meets Purpose</h3>
+                <p>I’ve always loved cooking and I’ve always loved building websites. This project brings both passions
+                    together — creating a place where practical recipes and clean, thoughtful design work hand in hand.
                 </p>
 
-                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <li>✔ Valid, accessible HTML</li>
-                    <li>✔ Clean, responsive CSS</li>
-                    <li>✔ JavaScript features including DOM interaction, events, arrays, objects, and localStorage</li>
-                    <li>✔ A recipe filter system</li>
-                    <li>✔ A meal idea generator</li>
-                    <li>✔ A consistent design system across all pages</li>
-                </ul>
-
-                <p>Everything was built from scratch — no templates, no frameworks, and no third‑party builders.</p>
+                <h3>The Vision</h3>
+                <p>As the site grows, the goal is to keep everything clear, helpful, and easy to use. Whether it’s
+                    recipes, tips, or quick meal ideas, everything is designed to save time and reduce stress in the
+                    kitchen.</p>
             </section>
 
         </main>
 
-        <!-- =========================
-         FOOTER (IDENTICAL TO HOME)
-    ========================== -->
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
         <footer>
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastmodified"></p>

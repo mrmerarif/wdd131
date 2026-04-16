@@ -5,24 +5,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>WDD 131 – Dynamic Web Fundamentals – Few Steps Meals by Merari Flores</title>
+        <title>Few Steps Meals – WDD 131 – Merari Flores</title>
 
         <meta name="description"
             content="Few Steps Meals by Merari Flores offers simple, budget-friendly recipes, quick meal ideas, and easy cooking inspiration for real life.">
         <meta name="author" content="Merari Flores">
 
-        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-        
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/main.css">
 
-        
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/main.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
     </head>
 
     <body class="fsm-home">
@@ -43,51 +41,63 @@
             </nav>
         </header>
 
-       
         <main class="fsm-home">
 
             
             <section class="cta-section">
                 <div class="cta-grid">
-                    <button class="cta-btn primary" id="cta-share-recipe">Share a Recipe</button>
-                    <button class="cta-btn primary" id="cta-share-video">Share a Video</button>
-                    <button class="cta-btn secondary" id="cta-browse-recipes">Browse Recipes</button>
-                    <button class="cta-btn secondary" id="cta-meal-ideas">Meal Ideas Generator</button>
+                    <a href="share-recipe.html" class="cta-btn primary">Share a Recipe</a>
+                    <a href="share-video.html" class="cta-btn primary">Share a Video</a>
+                    <a href="share-tip.html" class="cta-btn primary">Share a Tip</a>
+                    <a href="contact.html" class="cta-btn primary">Contact Us</a>
+                    
+                    <a href="recipes.html" class="cta-btn secondary">Browse Recipes</a>
+                    <a href="meal-ideas.html" class="cta-btn secondary">Meal Ideas Generator</a>
                 </div>
             </section>
 
             
-            <section class="hero">
-                <div class="hero-text">
+            <section class="hero-full">
+                <img src="images/crepe-large.webp" alt="Fresh salad with greens and vegetables" loading="lazy"
+                    width="1600" height="1000" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
                     <h2>Simple, budget-friendly recipes anyone can make</h2>
                     <p>Few Steps Meals focuses on quick, affordable dishes with clear, easy steps. Perfect for busy
-                        days,
-                        tight budgets, and real life.</p>
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero-kitchen.jpg" alt="Cozy kitchen counter with ingredients ready to cook"
-                        loading="lazy">
+                        days, tight budgets, and real life.</p>
                 </div>
             </section>
 
             
             <section class="highlight-row">
+
+                
                 <article class="card recipe-of-day">
                     <h3>Recipe of the Day</h3>
+
+                   
+                    <img src="images/salads.webp" alt="Recipe of the day image" class="recipe-of-day-img"
+                        loading="lazy">
+
                     <div id="recipe-of-day-content"></div>
                 </article>
 
-                <article class="card meal-ideas-preview">
-                    <h3>Need a quick idea?</h3>
-                    <p>Tap the button to get a simple meal idea in just a few steps.</p>
-                    <button id="generate-idea-btn" class="cta-btn secondary">Generate a Meal Idea</button>
-                    <div id="meal-idea-output"></div>
-                    <button id="save-idea-btn" class="cta-btn tertiary">Save This Idea</button>
-                    <p class="saved-ideas-note">Saved ideas: <span id="saved-ideas-count">0</span></p>
+               
+                <article class="card shared-recipes-preview">
+                    <h3>Community Favorites</h3>
+                    <p>See what others in our community are cooking — featured recipes shared by real home cooks.</p>
+
+                    <img src="images/kids-helping-small.webp" alt="Featured community recipes"
+                        class="shared-recipes-img" loading="lazy">
+
+                    <a href="recipes.html#shared-recipes" class="cta-btn tertiary">See Featured Recipes</a>
                 </article>
+
             </section>
 
-            <!-- FEATURED RECIPES ROW 1 -->
+           
             <section class="featured-row">
                 <article class="card" id="most-popular-card">
                     <h3>Most Popular Recipe</h3>
@@ -105,22 +115,21 @@
                 </article>
             </section>
 
-            <!-- BRAND DIVIDER -->
+           
             <section class="brand-divider">
                 <h2>Few Steps Meals</h2>
                 <p>Simple, budget-friendly recipes anyone can make.</p>
             </section>
 
-            <!-- SPECIALTY ROW 2 -->
+            
             <section class="specialty-row">
-
                 <article class="card specialty-card" id="five-ingredient-card">
                     <h3>5-Ingredient Magic</h3>
                     <div class="specialty-body" id="five-ingredient-content"></div>
                 </article>
 
                 <article class="card specialty-card" id="five-ten-card">
-                    <h3>5–10 Ingredient Favorites</h3>
+                    <h3>6–10 Ingredient Favorites</h3>
                     <div class="specialty-body" id="five-ten-content"></div>
                 </article>
 
@@ -129,10 +138,11 @@
                     <h3>Special Recipes, More Flavor</h3>
                     <div class="specialty-body" id="special-recipes-content"></div>
                 </article>
-
             </section>
 
         </main>
+
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
 
         <footer>
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>

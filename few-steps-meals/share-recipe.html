@@ -5,10 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Recipes – Few Steps Meals by Merari Flores</title>
+        <title>Share a Recipe – Few Steps Meals</title>
 
-        <meta name="description"
-            content="Browse simple, budget-friendly recipes with 5–10 ingredients. Easy meals for real life.">
+        <meta name="description" content="Share your favorite recipe with the Few Steps Meals community.">
         <meta name="author" content="Merari Flores">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +19,6 @@
 
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/darkmode.js" defer></script>
-        <script src="scripts/recipes.js" defer></script>
     </head>
 
     <body class="fsm-home">
@@ -31,7 +29,7 @@
 
             <nav>
                 <a href="index.html">Home</a>
-                <a href="recipes.html" class="active">Recipes</a>
+                <a href="recipes.html">Recipes</a>
                 <a href="meal-ideas.html">Meal Ideas</a>
                 <a href="categories.html">Categories</a>
                 <a href="blog.html">Blog</a>
@@ -41,45 +39,46 @@
             </nav>
         </header>
 
-        <main class="fsm-home fsm-recipes">
+        <main class="fsm-home">
 
-            <section class="hero-full">
+            <section class="hero-full small-hero">
                 <img src="images/colorful-ingredients-small.webp" alt="Fresh ingredients on a kitchen counter"
-                    loading="lazy" width="1600" height="1000" class="hero-bg">
+                    loading="lazy" width="1600" height="600" class="hero-bg">
 
                 <div class="hero-overlay"></div>
 
                 <div class="hero-content">
-                    <h2>Explore Delicious, Simple Recipes</h2>
-                    <p>All recipes use 5–10 ingredients, clear steps, and budget-friendly ingredients. Perfect for busy
-                        days, tight budgets, and real life.</p>
+                    <h2>Share Your Recipe</h2>
+                    <p>Inspire others with your simple, delicious creations.</p>
                 </div>
             </section>
 
-            <section class="card">
-                <h3>Filter Recipes</h3>
-                <p>Search by ingredient, category, or difficulty.</p>
+            <section class="form-card">
+                <h2>Share a Recipe</h2>
+                <p>Have a simple, delicious recipe? Share it with the Few Steps Meals community.</p>
 
-                <input type="text" id="recipe-search" placeholder="Search recipes..." class="search-input">
+                <form>
+                    <fieldset>
+                        <label for="recipe-name">Recipe Name</label>
+                        <input type="text" id="recipe-name" name="recipe-name" required>
 
-                <div class="filter-buttons">
-                    <button class="cta-btn" data-filter="all">All</button>
-                    <button class="cta-btn" data-filter="5-ingredients">3–5 Ingredients</button>
-                    <button class="cta-btn" data-filter="5-10">5–10 Ingredients</button>
-                    <button class="cta-btn" data-filter="budget">Budget</button>
-                    <button class="cta-btn" data-filter="quick">Quick</button>
-                    <button class="cta-btn" data-filter="special">Special</button>
-                    <button class="cta-btn" data-filter="healthy">Healthy</button>
-                </div>
+                        <label for="ingredients">Ingredients</label>
+                        <textarea id="ingredients" name="ingredients" rows="5" placeholder="List ingredients here..."
+                            required></textarea>
+
+                        <label for="steps">Steps / Instructions</label>
+                        <textarea id="steps" name="steps" rows="6" placeholder="Explain how to make it..."
+                            required></textarea>
+
+                        <label for="photo" class="file-label">Choose a Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </fieldset>
+
+                    <button type="submit" class="cta-btn primary">Share Recipe</button>
+                </form>
             </section>
-
-            <section class="recipe-gallery" id="recipe-gallery"></section>
 
         </main>
-
-
-        
-
 
         <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
 

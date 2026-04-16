@@ -19,14 +19,11 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/main.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
     </head>
 
     <body class="fsm-home">
 
-        <!-- =========================
-         HEADER (IDENTICAL TO HOME)
-    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
@@ -35,7 +32,7 @@
                 <a href="index.html">Home</a>
                 <a href="recipes.html">Recipes</a>
                 <a href="meal-ideas.html">Meal Ideas</a>
-                <a href="categories.html">Categories</a>
+                <a href="categories.html" class="active">Categories</a>
                 <a href="blog.html">Blog</a>
                 <a href="tips.html">Tips</a>
                 <a href="about.html">About</a>
@@ -43,42 +40,35 @@
             </nav>
         </header>
 
-        <!-- =========================
-         PAGE TITLE + INTRO
-    ========================== -->
-        <main class="fsm-categories">
+        <main class="fsm-home fsm-categories">
 
-            <section class="hero">
-                <div>
+            <section class="hero-full">
+                <img src="images/veggies-medium.webp" alt="Fresh ingredients arranged by category" loading="lazy"
+                    width="1600" height="1000" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
                     <h2>Recipe Categories</h2>
                     <p>Explore recipes by category — from 5‑ingredient meals to quick dishes, budget favorites, and
-                        weekend
-                        specials.</p>
+                        weekend specials.</p>
                 </div>
-
-                <img src="images/categories-hero.jpg" alt="Fresh ingredients arranged by category" loading="lazy">
             </section>
 
-            <!-- =========================
-             CATEGORY GRID
-        ========================== -->
             <section class="featured-row">
 
-                <!-- 5-Ingredient Magic -->
                 <article class="card specialty-card">
-                    <h3>5‑Ingredient Magic</h3>
+                    <h3>3-5 Ingredient Magic</h3>
                     <p>Simple meals made with only five ingredients — fast, affordable, and delicious.</p>
                     <a href="recipes.html" class="cta-btn">Browse Recipes</a>
                 </article>
 
-                <!-- 5–10 Ingredient Favorites -->
                 <article class="card specialty-card">
                     <h3>5–10 Ingredient Favorites</h3>
                     <p>Balanced meals with a few more ingredients for extra flavor and variety.</p>
                     <a href="recipes.html" class="cta-btn">Browse Recipes</a>
                 </article>
 
-                <!-- Budget Meals -->
                 <article class="card specialty-card">
                     <h3>Budget Meals</h3>
                     <p>Affordable dishes using pantry staples and low-cost ingredients.</p>
@@ -89,21 +79,18 @@
 
             <section class="featured-row">
 
-                <!-- Quick Meals -->
                 <article class="card specialty-card">
                     <h3>Quick Meals</h3>
                     <p>Meals ready in 15 minutes or less — perfect for busy days.</p>
                     <a href="recipes.html" class="cta-btn">Browse Recipes</a>
                 </article>
 
-                <!-- Weekend Specials -->
                 <article class="card specialty-card">
                     <h3>Weekend Specials</h3>
                     <p>More flavorful dishes for when you have a little extra time to cook.</p>
                     <a href="recipes.html" class="cta-btn">Browse Recipes</a>
                 </article>
 
-                <!-- Healthy Choices -->
                 <article class="card specialty-card">
                     <h3>Healthy Choices</h3>
                     <p>Fresh, nutritious meals that support a balanced lifestyle.</p>
@@ -114,9 +101,8 @@
 
         </main>
 
-        <!-- =========================
-         FOOTER (IDENTICAL TO HOME)
-    ========================== -->
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
         <footer>
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastmodified"></p>

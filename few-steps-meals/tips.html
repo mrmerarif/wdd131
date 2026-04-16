@@ -19,14 +19,11 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/main.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
     </head>
 
     <body class="fsm-home">
 
-        <!-- =========================
-         HEADER (IDENTICAL TO HOME)
-    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
@@ -37,80 +34,91 @@
                 <a href="meal-ideas.html">Meal Ideas</a>
                 <a href="categories.html">Categories</a>
                 <a href="blog.html">Blog</a>
-                <a href="tips.html">Tips</a>
+                <a href="tips.html" class="active">Tips</a>
                 <a href="about.html">About</a>
                 <a href="references.html">References</a>
             </nav>
         </header>
 
-        <!-- =========================
-         PAGE TITLE + INTRO
-    ========================== -->
-        <main class="fsm-tips">
+        <main class="fsm-home fsm-tips">
 
-            <section class="hero">
-                <div>
+            
+            <section class="hero-full">
+                <img src="images/fresh-ingredients-large.webp" alt="Kitchen tools and ingredients arranged neatly" loading="lazy"
+                    width="1600" height="1000" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
                     <h2>Tips & Tricks</h2>
                     <p>Quick, practical kitchen tips to help you cook smarter, save time, and make meals taste better.
                     </p>
                 </div>
-
-                <img src="images/tips-hero.jpg" alt="Kitchen tools and ingredients arranged neatly" loading="lazy">
             </section>
 
-            <!-- =========================
-             TIPS GRID
-        ========================== -->
+            
+            <section class="card featured-post">
+                <img src="images/pasta-medium.webp" alt="Featured kitchen tip" loading="lazy" class="featured-post-img">
+
+                <div class="featured-post-content">
+                    <h3>Featured: Master the Art of Mise en Place</h3>
+                    <p>Professional chefs swear by this simple habit: preparing and organizing ingredients before
+                        cooking.
+                        It reduces stress, speeds up cooking, and improves results — even for beginners.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </div>
+            </section>
+
+            
             <section class="featured-row">
 
-                <!-- TIP 1 -->
                 <article class="card specialty-card">
                     <h3>Prep Ingredients First</h3>
                     <p>Chop, measure, and prepare everything before cooking — it keeps the process smooth and
                         stress-free.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- TIP 2 -->
                 <article class="card specialty-card">
                     <h3>Season as You Go</h3>
                     <p>Adding small amounts of salt and seasoning throughout cooking builds deeper, balanced flavor.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- TIP 3 -->
                 <article class="card specialty-card">
                     <h3>Use Pasta Water</h3>
                     <p>Save a cup of pasta water — its starch helps sauces stick and creates a silky texture.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
             </section>
 
             <section class="featured-row">
 
-                <!-- TIP 4 -->
                 <article class="card specialty-card">
                     <h3>Don’t Overcrowd the Pan</h3>
                     <p>Food needs space to brown properly — overcrowding traps steam and makes ingredients soggy.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- TIP 5 -->
                 <article class="card specialty-card">
                     <h3>Let Meat Rest</h3>
                     <p>Allow cooked meat to rest for a few minutes so juices redistribute and stay inside.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- TIP 6 -->
                 <article class="card specialty-card">
                     <h3>Keep Pantry Staples Ready</h3>
                     <p>Rice, beans, pasta, broth, and spices make it easy to cook last-minute meals without stress.</p>
+                    <a href="#" class="cta-btn">Read More</a>
                 </article>
 
             </section>
 
         </main>
 
-        <!-- =========================
-         FOOTER (IDENTICAL TO HOME)
-    ========================== -->
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
         <footer>
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastmodified"></p>

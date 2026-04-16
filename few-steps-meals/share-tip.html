@@ -5,10 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Meal Ideas – Few Steps Meals by Merari Flores</title>
+        <title>Share a Cooking Tip – Few Steps Meals</title>
 
-        <meta name="description"
-            content="Generate simple, budget-friendly meal ideas with just one click. Save your favorites for later.">
+        <meta name="description" content="Share your best cooking tips with the Few Steps Meals community.">
         <meta name="author" content="Merari Flores">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,19 +19,18 @@
 
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/darkmode.js" defer></script>
-        <script src="scripts/mealideas.js" defer></script>
     </head>
 
     <body class="fsm-home">
 
         <header>
-            <h1>Few Steps Meals</h1>
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+            <h1>Few Steps Meals</h1>
 
             <nav>
                 <a href="index.html">Home</a>
                 <a href="recipes.html">Recipes</a>
-                <a href="meal-ideas.html" class="active">Meal Ideas</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
                 <a href="categories.html">Categories</a>
                 <a href="blog.html">Blog</a>
                 <a href="tips.html">Tips</a>
@@ -41,39 +39,39 @@
             </nav>
         </header>
 
-        <main class="fsm-home fsm-mealideas">
+        <main class="fsm-home">
 
-            <section class="hero-full">
-                <img src="images/kids-cooking-large.webp" alt="Fresh ingredients ready for cooking" loading="lazy"
-                    width="1600" height="1000" class="hero-bg">
+            <section class="hero-full small-hero">
+                <img src="images/fresh-salad-large1.webp" alt="Fresh ingredients on a kitchen counter" loading="lazy"
+                    width="1600" height="600" class="hero-bg">
 
                 <div class="hero-overlay"></div>
 
                 <div class="hero-content">
-                    <h2>Quick Meal Ideas</h2>
-                    <p>Need inspiration? Generate simple, fast, budget-friendly meal ideas with one click. Save your
-                        favorites for later.</p>
+                    <h2>Share a Cooking Tip</h2>
+                    <p>Help others cook smarter with your favorite kitchen tips.</p>
                 </div>
             </section>
 
-            <section class="card meal-ideas-preview">
-                <h3>Need a quick idea?</h3>
-                <p>Tap the button to get a simple meal idea in just a few steps.</p>
+            <section class="form-card">
+                <h2>Share a Tip</h2>
+                <p>Have a clever cooking trick, shortcut, or kitchen hack? Share it with the community.</p>
 
-                <button id="generate-idea-btn" class="cta-btn secondary">Generate a Meal Idea</button>
+                <form>
+                    <fieldset>
+                        <label for="tip-title">Tip Title</label>
+                        <input type="text" id="tip-title" name="tip-title" required>
 
-                <div id="meal-idea-output"></div>
+                        <label for="tip-details">Your Tip</label>
+                        <textarea id="tip-details" name="tip-details" rows="6" placeholder="Explain your cooking tip..."
+                            required></textarea>
 
-                <button id="save-idea-btn" class="cta-btn tertiary">Save This Idea</button>
+                        <label for="tip-photo" class="file-label">Choose a Photo</label>
+                        <input type="file" id="tip-photo" name="tip-photo" accept="image/*">
+                    </fieldset>
 
-                <p class="saved-ideas-note">Saved ideas: <span id="saved-ideas-count">0</span></p>
-            </section>
-
-            <section class="card">
-                <h3>Your Saved Meal Ideas</h3>
-                <p>These ideas are stored in your browser using localStorage.</p>
-
-                <ul id="saved-ideas-list" class="saved-ideas-list"></ul>
+                    <button type="submit" class="cta-btn primary">Share Tip</button>
+                </form>
             </section>
 
         </main>

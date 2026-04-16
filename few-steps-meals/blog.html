@@ -19,14 +19,11 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/main.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
     </head>
 
     <body class="fsm-home">
 
-        <!-- =========================
-         HEADER (IDENTICAL TO HOME)
-    ========================== -->
         <header>
             <h1>Few Steps Meals</h1>
             <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
@@ -36,47 +33,53 @@
                 <a href="recipes.html">Recipes</a>
                 <a href="meal-ideas.html">Meal Ideas</a>
                 <a href="categories.html">Categories</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" class="active">Blog</a>
                 <a href="tips.html">Tips</a>
                 <a href="about.html">About</a>
                 <a href="references.html">References</a>
             </nav>
         </header>
 
-        <!-- =========================
-         PAGE TITLE + INTRO
-    ========================== -->
-        <main class="fsm-blog">
+        <main class="fsm-home fsm-blog">
 
-            <section class="hero">
-                <div>
+            <section class="hero-full">
+                <img src="images/spaghetti-medium.webp" alt="Notebook with cooking ideas and ingredients" loading="lazy"
+                    width="1600" height="1000" class="hero-bg">
+
+                <div class="hero-overlay"></div>
+
+                <div class="hero-content">
                     <h2>Cooking Tips & Inspiration</h2>
                     <p>Short, helpful posts to make cooking easier, faster, and more enjoyable — even on a budget.</p>
                 </div>
-
-                <img src="images/blog-hero.jpg" alt="Notebook with cooking ideas and ingredients" loading="lazy">
             </section>
 
-            <!-- =========================
-             BLOG GRID
-        ========================== -->
+            <section class="card featured-post">
+                <img src="images/veggies-small.webp" alt="Featured cooking tip" loading="lazy"
+                    class="featured-post-img">
+
+                <div class="featured-post-content">
+                    <h3>Featured: How to Cook Faster Without Stress</h3>
+                    <p>Learn simple strategies to speed up your cooking routine — from prepping ingredients smarter to
+                        choosing the right tools and mastering quick flavor boosts.</p>
+                    <a href="#" class="cta-btn">Read More</a>
+                </div>
+            </section>
+
             <section class="featured-row">
 
-                <!-- BLOG POST 1 -->
                 <article class="card specialty-card">
                     <h3>5 Ways to Save Money on Groceries</h3>
                     <p>Learn simple strategies to stretch your budget without sacrificing flavor or nutrition.</p>
                     <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- BLOG POST 2 -->
                 <article class="card specialty-card">
                     <h3>How to Build a 10‑Minute Meal</h3>
                     <p>A quick formula you can use to create fast meals from whatever you already have at home.</p>
                     <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- BLOG POST 3 -->
                 <article class="card specialty-card">
                     <h3>Pantry Staples You Should Always Have</h3>
                     <p>These ingredients make it easy to cook last‑minute meals without stress.</p>
@@ -87,21 +90,18 @@
 
             <section class="featured-row">
 
-                <!-- BLOG POST 4 -->
                 <article class="card specialty-card">
                     <h3>Beginner‑Friendly Knife Skills</h3>
                     <p>Improve your confidence and speed in the kitchen with these simple cutting techniques.</p>
                     <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- BLOG POST 5 -->
                 <article class="card specialty-card">
                     <h3>How to Season Food Like a Pro</h3>
                     <p>Salt, acid, fat, and heat — learn how to balance flavors in every dish.</p>
                     <a href="#" class="cta-btn">Read More</a>
                 </article>
 
-                <!-- BLOG POST 6 -->
                 <article class="card specialty-card">
                     <h3>Healthy Swaps for Everyday Meals</h3>
                     <p>Easy ingredient substitutions that boost nutrition without changing the taste you love.</p>
@@ -112,9 +112,8 @@
 
         </main>
 
-        <!-- =========================
-         FOOTER (IDENTICAL TO HOME)
-    ========================== -->
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
         <footer>
             <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
             <p id="lastmodified"></p>
