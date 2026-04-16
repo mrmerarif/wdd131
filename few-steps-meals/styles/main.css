@@ -228,6 +228,10 @@ footer a {
     z-index: 2;
 }
 
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.001);
+}
+
 .hero-full .hero-content h2,
 .small-hero .hero-content h2,
 .fsm-mealideas .hero .hero-content h2 {
@@ -275,18 +279,12 @@ footer a {
 
 /* =========================================================
    GRID SPACING
-   ========================================================= */
-.featured-row,
+   ========================================================= */.featured-row,
 .specialty-row,
 .recipe-gallery {
     display: grid;
     gap: 1.75rem;
     margin-bottom: 2rem;
-}
-
-.featured-row,
-.specialty-row,
-.recipe-gallery {
     grid-template-columns: repeat(3, 1fr);
 }
 
