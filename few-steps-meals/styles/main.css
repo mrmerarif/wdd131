@@ -1,24 +1,25 @@
-/* FULL CLEANED + FIXED CSS — ONLY BROKEN AREAS UPDATED */
-/* All your comments preserved exactly as provided */
-
+/* =========================================================
+   GLOBAL ROOT VARIABLES
+   ========================================================= */
 :root {
     --fsm-primary: #2B2B2B;
-    /* Header/Footer charcoal */
     --fsm-secondary: #FFFFFF;
-    /* Pure white background */
     --fsm-accent: #A83226;
-    /* Deep paprika (more red) */
     --fsm-accent-2: #F2C14E;
-    /* Saffron accents */
     --fsm-accent-3: #2B2B2B;
-    /* Text accents */
     --fsm-card-bg: #F5F5F5;
-    /* Soft neutral gray for boxes */
 }
 
-/* =========================
-   GLOBAL TEXT CENTERING
-   ========================= */
+/* =========================================================
+   GLOBAL PAGE LAYOUT
+   ========================================================= */
+body {
+    background: var(--fsm-secondary);
+    color: var(--fsm-accent-3);
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
 
 body.fsm-home h1,
 body.fsm-home h2,
@@ -27,208 +28,327 @@ body.fsm-home h4,
 body.fsm-home h5,
 body.fsm-home h6,
 body.fsm-home p {
-    text-align: center !important;
+    text-align: center;
 }
 
-/* =========================
-   PAGE BACKGROUND
-   ========================= */
-
-body.fsm-home {
-    background: var(--fsm-secondary) !important;
-    color: var(--fsm-accent-3);
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+.fsm-home,
+.fsm-recipes,
+.fsm-mealideas,
+.fsm-categories,
+.fsm-blog,
+.fsm-tips,
+.fsm-about {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
-
-body.fsm-home header {
-    background-color: var(--fsm-primary) !important;
-    color: white !important;
-    text-align: center !important;
-    padding: 1.2rem 0 !important;
+   ========================================================= */
+header {
+    background-color: var(--fsm-primary);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
 }
 
-body.fsm-home header h1 {
-    margin: 0.3rem 0 !important;
-    color: white !important;
+header h1 {
+    margin: 0.3rem 0;
+    color: white;
 }
 
-body.fsm-home #course-title {
+#course-title {
     display: block;
     margin-bottom: 0.3rem;
-    color: white !important;
+    color: white;
 }
 
-/* =========================
-   NAV LAYOUT
-   ========================= */
-
-body.fsm-home header nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.75rem !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    padding: 1rem 1.5rem !important;
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
 }
 
-/* =========================
-   NAV BUTTONS
-   ========================= */
-
-body.fsm-home header nav a {
-    background: var(--fsm-accent) !important;
-    color: white !important;
-    padding: 0.55rem 1.25rem !important;
-    border-radius: 999px !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+header nav a {
+    background: var(--fsm-accent);
+    color: white;
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
-body.fsm-home header nav a:hover {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+header nav a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================
+/* ACTIVE NAV BLOCK REMOVED */
+
+/* =========================================================
    FOOTER
-   ========================= */
-
-body.fsm-home footer {
-    background-color: var(--fsm-primary) !important;
-    color: white !important;
-    text-align: center !important;
-    padding: 1.2rem 0 !important;
+   ========================================================= */
+footer {
+    background-color: var(--fsm-primary);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
 }
 
-body.fsm-home footer p {
-    margin: 0.25rem 0 !important;
+footer p {
+    margin: 0.25rem 0;
 }
 
-body.fsm-home footer a {
-    color: white !important;
+footer a {
+    color: white;
     text-decoration: underline;
 }
 
-/* =========================
-   GLOBAL CTA BUTTON STYLE
-   ========================= */
-
-.fsm-home .cta-btn {
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 999px !important;
-    border: none !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    white-space: nowrap !important;
-    background-color: var(--fsm-accent) !important;
-    color: white !important;
-    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+/* =========================================================
+   GLOBAL CTA BUTTON
+   ========================================================= */
+.cta-btn {
+    padding: 0.65rem 0.75rem;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: var(--fsm-accent);
+    color: white;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.fsm-home .cta-btn:hover {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+.cta-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================
-   CTA GRID (HOME PAGE)
-   ========================= */
-
-.fsm-home .cta-grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.75rem !important;
-    margin: 1rem 0 !important;
+/* =========================================================
+   CTA GRID
+   ========================================================= */
+.cta-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
-.fsm-home .cta-grid .cta-btn {
-    flex: 0 0 auto !important;
-    text-align: center !important;
+.cta-grid .cta-btn {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
-/* MOBILE CTA GRID */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .cta-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 0.75rem !important;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .cta-grid .cta-btn {
-        width: 100% !important;
-        flex: unset !important;
+        flex: 1 1 45%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
     }
 }
 
-/* =========================
-   BADGES — SAFFRON
-   ========================= */
-
-.fsm-home .specialty-card .badge {
-    background-color: var(--fsm-accent-2) !important;
-    color: var(--fsm-primary) !important;
+/* =========================================================
+   HERO SYSTEM
+   ========================================================= */
+.hero-full,
+.small-hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2rem;
 }
 
-/* =========================
-   LAYOUT
-   ========================= */
-
-.fsm-home {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    padding: 1.5rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 2rem !important;
+.fsm-mealideas .hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2rem;
 }
 
-/* =========================
-   HERO, ROWS, CARDS
-   ========================= */
-
-.fsm-home .hero {
-    display: grid !important;
-    grid-template-columns: 1.2fr 1fr !important;
-    gap: 1.75rem !important;
-    align-items: center !important;
-    background-color: var(--fsm-card-bg) !important;
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
+.hero-full .hero-bg,
+.small-hero .hero-bg,
+.fsm-mealideas .hero .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.fsm-home .highlight-row {
-    display: grid !important;
-    grid-template-columns: 1.4fr 1fr !important;
-    gap: 1.75rem !important;
+.hero-full .hero-overlay,
+.small-hero .hero-overlay,
+.fsm-mealideas .hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55));
 }
 
-.fsm-home .featured-row,
-.fsm-home .specialty-row {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1.75rem !important;
+.hero-full .hero-content,
+.small-hero .hero-content,
+.fsm-mealideas .hero .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
 }
 
-.fsm-home .card,
-.fsm-home .specialty-card {
-    background-color: var(--fsm-card-bg) !important;
-    border-radius: 12px !important;
-    padding: 1.5rem !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06) !important;
+.hero-full .hero-content h2,
+.small-hero .hero-content h2,
+.fsm-mealideas .hero .hero-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-/* =========================
+.hero-full .hero-content p,
+.small-hero .hero-content p,
+.fsm-mealideas .hero .hero-content p {
+    font-size: 1.3rem;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.hero-full .cta-btn,
+.small-hero .cta-btn,
+.fsm-mealideas .hero .cta-btn {
+    margin-top: 1.25rem;
+}
+
+/* =========================================================
+   CARD SYSTEM
+   ========================================================= */
+.card,
+.specialty-card {
+    background-color: var(--fsm-card-bg);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .cta-btn,
+.specialty-card .cta-btn {
+    margin-top: 1.5rem;
+    min-width: 150px;
+    max-width: 180px;
+    align-self: center;
+}
+
+/* =========================================================
+   GRID SPACING
+   ========================================================= */
+.featured-row,
+.specialty-row,
+.recipe-gallery {
+    display: grid;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.featured-row,
+.specialty-row,
+.recipe-gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+
+    .featured-row,
+    .specialty-row,
+    .recipe-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card,
+    .specialty-card {
+        padding: 1.5rem;
+    }
+}
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+.fsm-home section,
+.fsm-recipes section,
+.fsm-categories section,
+.fsm-tips section,
+.fsm-blog section,
+.fsm-about section,
+.fsm-mealideas section {
+    margin-bottom: 2.5rem;
+}
+
+/* =========================================================
+   IMAGE SIZING
+   ========================================================= */
+.card img,
+.specialty-card img,
+.featured-post-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.fsm-tips .specialty-card img {
+    height: 240px;
+}
+
+.shared-recipes-img,
+.recipe-of-day-img {
+    width: 100%;
+    max-width: 500px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem auto;
+    display: block;
+}
+
+/* =========================================================
    FORM CARD
-   ========================= */
-
+   ========================================================= */
 .form-card {
     max-width: 700px;
     margin: 2rem auto;
@@ -269,10 +389,6 @@ body.fsm-home footer a {
     font-size: 1rem;
 }
 
-/* =========================
-   FIXED FILE INPUT (SCOPED)
-   ========================= */
-
 .form-card input[type="file"] {
     display: none;
 }
@@ -280,7 +396,7 @@ body.fsm-home footer a {
 .form-card .file-label {
     display: inline-block;
     padding: 0.75rem 1.25rem;
-    background: #d9534f;
+    background: var(--fsm-accent);
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -290,599 +406,326 @@ body.fsm-home footer a {
 }
 
 .form-card .file-label:hover {
-    background: #c64541;
+    background: #8f241c;
 }
 
 .form-card button {
     margin-top: 1rem;
 }
 
-/* =========================
-   HERO FULL
-   ========================= */
-
-.hero-full {
-    position: relative;
-    width: 100%;
-    height: 65vh;
-    max-height: 750px;
-    overflow: hidden;
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+.fsm-home .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.75rem;
+    align-items: center;
+    background-color: var(--fsm-card-bg);
+    padding: 1.5rem;
     border-radius: 12px;
 }
 
-.hero-full .hero-bg {
+.fsm-home .highlight-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.75rem;
+}
+
+.fsm-home .featured-row,
+.fsm-home .specialty-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.fsm-home .specialty-card .badge {
+    background-color: var(--fsm-accent-2);
+    color: var(--fsm-primary);
+}
+
+/* =========================================================
+   RECIPES PAGE
+   ========================================================= */
+.fsm-recipes .cta-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.25rem 0;
+}
+
+.fsm-recipes .cta-grid .cta-btn {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.fsm-recipes .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .fsm-recipes .cta-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fsm-recipes .cta-grid .cta-btn {
+        flex: 1 1 45%;
+    }
+
+    .fsm-recipes .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SEARCH BAR FIX — 280px */
+#recipe-search.search-input {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 280px;
+    margin: 0 auto;
     display: block;
 }
 
-.hero-full .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55));
+/* =========================================================
+   TIPS PAGE
+   ========================================================= */
+.fsm-tips .specialty-card {
+    min-height: 260px;
 }
 
-.hero-full .hero-content {
-    position: absolute;
-    inset: 0;
+.fsm-tips .featured-post .cta-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    align-self: flex-start;
+    min-width: 160px;
+    max-width: 200px;
+}
+
+/* =========================================================
+   BLOG PAGE
+   ========================================================= */
+.fsm-blog .featured-post img,
+.fsm-blog .specialty-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+.fsm-about section {
+    background: var(--fsm-card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+}
+
+.fsm-about img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* HERO WIDTH FIX */
+.fsm-about .hero,
+.fsm-about .hero-full {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+/* =========================================================
+   CATEGORIES PAGE
+   ========================================================= */
+.fsm-categories .specialty-card {
+    height: 100%;
+    min-height: 280px;
+    padding: 2rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 14px;
+    background-color: var(--fsm-card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.fsm-categories .specialty-card .cta-btn {
+    margin: 1.25rem auto 0 auto;
+    min-width: 150px;
+    max-width: 180px;
+}
+
+.fsm-categories .featured-row {
+    gap: 2.25rem;
+    margin-bottom: 2.5rem;
+}
+
+/* =========================================================
+   MEAL IDEAS PAGE
+   ========================================================= */
+.card.meal-ideas-preview {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem 2rem;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem;
     text-align: center;
-    color: white;
-    z-index: 2;
 }
 
-.hero-full .hero-content h2 {
-    margin-top: 0.2rem;
-    font-size: 2.9rem;
+#generate-idea-btn,
+#save-idea-btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#generate-idea-btn {
+    margin-top: 0.5rem;
+}
+
+#save-idea-btn {
+    margin-bottom: 0.5rem;
+}
+
+#meal-idea-output {
+    width: 100%;
+    max-width: 260px;
+    margin: 1rem auto;
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    color: white !important;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--fsm-accent);
+
+    /* Keep your gradient but make it tighter */
+    background: linear-gradient(135deg,
+            var(--fsm-card-bg),
+            rgba(255, 255, 255, 0.85));
 }
 
-.hero-full .hero-content p {
-    margin-bottom: 0.75rem;
-    max-width: 780px;
+.saved-ideas-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.7rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #ffffff !important;
 }
 
-/* =========================
-   BRAND DIVIDER
-   ========================= */
-
-.brand-divider {
-    text-align: center;
-    padding: 2rem 0;
-    border-top: 3px solid var(--fsm-primary);
-    margin-top: 1rem;
+.saved-ideas-list li {
+    background: var(--fsm-card-bg);
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-/* =========================
-   DARK MODE TOGGLE
-   ========================= */
+.delete-idea-btn {
+    background: var(--fsm-accent);
+    color: white;
+    border: none;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.delete-idea-btn:hover {
+    background: #8f241c;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+body.dark-mode {
+    background: #121212;
+    color: #F5F5F5;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #000000;
+    color: #F5F5F5;
+}
+
+body.dark-mode header nav a {
+    background: #444444;
+    color: #F5F5F5;
+}
+
+body.dark-mode header nav a:hover {
+    background: #666666;
+}
+
+body.dark-mode .card,
+body.dark-mode .specialty-card,
+body.dark-mode .form-card,
+body.dark-mode .fsm-about section {
+    background: #1F1F1F;
+    color: #F5F5F5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .cta-btn,
+body.dark-mode .delete-idea-btn,
+body.dark-mode .form-card .file-label {
+    background: var(--fsm-accent);
+    color: #FFFFFF;
+}
+
+body.dark-mode #meal-idea-output {
+    background: linear-gradient(135deg, #1F1F1F, #333333);
+    border-color: var(--fsm-accent-2);
+}
+
+/* =========================================================
+   DARK MODE TOGGLE — FLOATING BOTTOM‑RIGHT
+   ========================================================= */
 
 #darkmode-toggle {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     background: var(--fsm-primary);
-    color: white;
+    color: #ffffff;
     border: none;
-    padding: 0.6rem 0.9rem;
-    border-radius: 999px;
-    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     z-index: 9999;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.25s ease, transform 0.2s ease;
 }
 
 #darkmode-toggle:hover {
-    transform: translateY(-2px);
-    background: var(--fsm-accent);
+    transform: translateY(-3px);
 }
 
-body.dark-mode {
-    background: #1a1a1a !important;
-    color: #f5f5f5 !important;
+body.dark-mode #darkmode-toggle {
+    background: #f5f5f5;
+    color: #000000;
 }
 
-/* =========================
-   CATEGORY PAGE
-   ========================= */
-
-.fsm-categories .specialty-card {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100% !important;
-    min-height: 280px !important;
-    padding: 2rem !important;
-    border: 1px solid #dcdcdc !important;
-    border-radius: 14px !important;
-    background-color: var(--fsm-card-bg) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-}
-
-.recipe-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-}
-
-.fsm-categories .specialty-card .cta-btn {
-    display: block !important;
-    margin: 1.25rem auto 0 auto !important;
-    width: auto !important;
-    min-width: 150px !important;
-    max-width: 180px !important;
-    text-align: center !important;
-}
-
-.fsm-categories .featured-row {
-    gap: 2.25rem !important;
-    margin-bottom: 2.5rem !important;
-}
-
-/* =========================
-   TIPS PAGE
-   ========================= */
-
-.fsm-tips .specialty-card .cta-btn {
-    display: block !important;
-    margin: 1.25rem auto 0 auto !important;
-    width: auto !important;
-    min-width: 150px !important;
-    max-width: 180px !important;
-    text-align: center !important;
-}
-
-.fsm-tips .specialty-card {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    min-height: 260px !important;
-}
-
-.fsm-tips .featured-post .cta-btn {
-    display: inline-block !important;
-    margin-top: 1.25rem !important;
-    align-self: flex-start !important;
-    min-width: 160px !important;
-    max-width: 200px !important;
-    text-align: center !important;
-}
-
-/* =========================
-   MEAL IDEA OUTPUT
-   ========================= */
-
-#meal-idea-output {
-    margin-top: 1.25rem;
-    padding: 1.5rem 1.75rem;
-    background: linear-gradient(135deg,
-            var(--fsm-card-bg),
-            rgba(255, 255, 255, 0.85));
-    border: 2px solid var(--fsm-accent);
-    border-radius: 14px;
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: var(--fsm-primary);
-    text-align: center;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.3s ease;
-}
-
-#meal-idea-output.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-/* =========================
-   CARD CTA ALIGNMENT
-   ========================= */
-
-.specialty-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 260px;
-}
-
-.specialty-card .cta-btn {
-    display: block;
-    margin: 1.25rem auto 0 auto;
-    min-width: 150px;
-    max-width: 180px;
-    text-align: center;
-}
-
-.card .cta-btn {
-    display: block;
-    margin: 1.25rem auto 0 auto;
-    min-width: 150px;
-    max-width: 180px;
-    text-align: center;
-}
-
-/* =========================
-   IMAGES
-   ========================= */
-
-.shared-recipes-img,
-.recipe-of-day-img {
-    width: 100%;
-    max-width: 500px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 1rem auto;
-    display: block;
-}
-
-
-/* =========================
-   HOME PAGE CTA GRID — 6 BUTTONS IN ONE ROW
-   ========================= */
-
-.fsm-home .cta-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    /* prevents wrapping */
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    margin: 1rem 0 !important;
-}
-
-.fsm-home .cta-grid .cta-btn {
-    flex: 1 1 auto !important;
-    /* allows shrinking */
-    min-width: 0 !important;
-    /* prevents overflow */
-    text-align: center !important;
-    padding: 0.65rem 0.75rem !important;
-    /* tighter padding so all 6 fit */
-    font-size: 0.95rem !important;
-    /* slightly smaller text */
-}
-
-/* MOBILE — allow wrapping only on small screens */
-@media (max-width: 900px) {
-    .fsm-home .cta-grid {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-
-    .fsm-home .cta-grid .cta-btn {
-        flex: 1 1 45% !important;
-        font-size: 1rem !important;
-        padding: 0.75rem 1rem !important;
-    }
-}
-
-/* =========================
-   MEAL IDEAS PAGE — FINAL FIX
-   ========================= */
-
-/* Main card layout */
-.card.meal-ideas-preview {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-    padding: 2rem !important;
-    text-align: center !important;
-}
-
-/* Buttons stay centered and same width */
-#generate-idea-btn,
-#save-idea-btn {
-    width: 100% !important;
-    max-width: 260px !important;
-    padding: 0.85rem 1rem !important;
-    font-size: 1.05rem !important;
-    border-radius: 10px !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-}
-
-/* Spacing between the two buttons */
-#generate-idea-btn {
-    margin-top: 0.5rem !important;
-}
-
-#save-idea-btn {
-    margin-bottom: 0.5rem !important;
-}
-
-/* Meal idea output box */
-#meal-idea-output {
-    margin-top: 1rem !important;
-    padding: 1.25rem 1.5rem !important;
-    font-size: 1.35rem !important;
-    font-weight: 700 !important;
-    border-radius: 12px !important;
-    text-align: center !important;
-}
-
-/* Saved ideas list */
-.saved-ideas-list {
-    list-style: none !important;
-    padding: 0 !important;
-    margin-top: 1rem !important;
-    width: 100% !important;
-    max-width: 500px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.saved-ideas-list li {
-    background: var(--fsm-card-bg) !important;
-    padding: 0.85rem 1rem !important;
-    border-radius: 10px !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    font-size: 1rem !important;
-}
-
-/* Delete button restored */
-.delete-idea-btn {
-    background: var(--fsm-accent) !important;
-    color: white !important;
-    border: none !important;
-    padding: 0.4rem 0.75rem !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    font-size: 0.9rem !important;
-    transition: background 0.2s ease !important;
-}
-
-.delete-idea-btn:hover {
-    background: #8f241c !important;
-}
-
-/* =========================
-   MEAL IDEAS — DELETE BUTTON FINAL FIX
-   ========================= */
-
-.delete-idea-btn {
-    background: var(--fsm-accent) !important;
-    /* your paprika red */
-    color: white !important;
-    border: none !important;
-    padding: 0.45rem 0.9rem !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
-    white-space: nowrap !important;
-    transition: background 0.2s ease, transform 0.15s ease !important;
-}
-
-.delete-idea-btn:hover {
-    background: #8f241c !important;
-    /* darker paprika */
-    transform: translateY(-2px) !important;
-}
-
-.saved-ideas-list li {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0.85rem 1rem !important;
-    background: var(--fsm-card-bg) !important;
-    border-radius: 10px !important;
-    margin-bottom: 0.5rem !important;
-}
-
-/* =========================
-   BLOG PAGE — FIX HERO LAYOUT
-   ========================= */
-
-.fsm-blog .hero-full,
-.fsm-blog .small-hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 420px !important;
-    overflow: hidden !important;
-    border-radius: 12px !important;
-    margin-bottom: 2rem !important;
-}
-
-.fsm-blog .hero-full .hero-bg,
-.fsm-blog .small-hero .hero-bg {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-.fsm-blog .hero-full .hero-overlay,
-.fsm-blog .small-hero .hero-overlay {
-    position: absolute !important;
-    inset: 0 !important;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55)) !important;
-}
-
-.fsm-blog .hero-full .hero-content,
-.fsm-blog .small-hero .hero-content {
-    position: absolute !important;
-    inset: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 1.5rem !important;
-    color: white !important;
-    z-index: 2 !important;
-}
-
-.fsm-blog .hero-full .hero-content h2,
-.fsm-blog .small-hero .hero-content h2 {
-    font-size: 2.4rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 0.5rem !important;
-}
-
-.fsm-blog .hero-full .hero-content p,
-.fsm-blog .small-hero .hero-content p {
-    font-size: 1.3rem !important;
-    max-width: 780px !important;
-    margin: 0 auto !important;
-    line-height: 1.3 !important;
-}
-
-/* Read More button inside hero */
-.fsm-blog .hero-full .cta-btn,
-.fsm-blog .small-hero .cta-btn {
-    margin-top: 1.25rem !important;
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 999px !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-}
-
-/* =========================
-   TIPS PAGE — FIX HERO LAYOUT
-   ========================= */
-
-.fsm-tips .hero-full,
-.fsm-tips .small-hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 420px !important;
-    overflow: hidden !important;
-    border-radius: 12px !important;
-    margin-bottom: 2rem !important;
-}
-
-.fsm-tips .hero-full .hero-bg,
-.fsm-tips .small-hero .hero-bg {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-/* Overlay for readability */
-.fsm-tips .hero-full .hero-overlay,
-.fsm-tips .small-hero .hero-overlay {
-    position: absolute !important;
-    inset: 0 !important;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55)) !important;
-}
-
-/* Centered text on top of image */
-.fsm-tips .hero-full .hero-content,
-.fsm-tips .small-hero .hero-content {
-    position: absolute !important;
-    inset: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 1.5rem !important;
-    color: white !important;
-    z-index: 2 !important;
-}
-
-.fsm-tips .hero-full .hero-content h2,
-.fsm-tips .small-hero .hero-content h2 {
-    font-size: 2.4rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 0.5rem !important;
-}
-
-.fsm-tips .hero-full .hero-content p,
-.fsm-tips .small-hero .hero-content p {
-    font-size: 1.3rem !important;
-    max-width: 780px !important;
-    margin: 0 auto !important;
-    line-height: 1.3 !important;
-}
-
-/* Read More button inside hero */
-.fsm-tips .hero-full .cta-btn,
-.fsm-tips .small-hero .cta-btn {
-    margin-top: 1.25rem !important;
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 999px !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-}
-
-/* =========================
-   FIX PASTA IMAGE DISTORTION
-   ========================= */
-
-.fsm-tips .featured-post-img,
-.fsm-tips .specialty-card img {
-    width: 100% !important;
-    height: 260px !important;
-    object-fit: cover !important;
-    border-radius: 10px !important;
-    display: block !important;
-}
-
-
-/* =========================
-   RECIPES PAGE — FIX CTA GRID
-   ========================= */
-
-.fsm-recipes .cta-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    /* keep all buttons in one row */
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    margin: 1.25rem 0 !important;
-}
-
-.fsm-recipes .cta-grid .cta-btn {
-    flex: 1 1 auto !important;
-    /* allow shrinking */
-    min-width: 0 !important;
-    /* prevent overflow */
-    text-align: center !important;
-    padding: 0.65rem 0.75rem !important;
-    /* tighter padding */
-    font-size: 0.95rem !important;
-}
-
-/* MOBILE — allow wrapping only on small screens */
-@media (max-width: 900px) {
-    .fsm-recipes .cta-grid {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-
-    .fsm-recipes .cta-grid .cta-btn {
-        flex: 1 1 45% !important;
-        font-size: 1rem !important;
-        padding: 0.75rem 1rem !important;
-    }
-}

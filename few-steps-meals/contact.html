@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Contact Us – Few Steps Meals</title>
+
+        <meta name="description" content="Contact Few Steps Meals with questions, suggestions, or feedback.">
+        <meta name="author" content="Merari Flores">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/darkmode.js" defer></script>
+    </head>
+
+    <body class="fsm-contact">
+
+        <header>
+            <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
+            <h1>Few Steps Meals</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-ideas.html">Meal Ideas</a>
+                <a href="categories.html">Categories</a>
+                <a href="blog.html">Blog</a>
+                <a href="tips.html">Tips</a>
+                <a href="about.html">About</a>
+                <a href="references.html">References</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </nav>
+        </header>
+
+        <main class="fsm-contact">
+
+            <section class="form-card">
+                <h2>Contact Us</h2>
+                <p>Have a question, suggestion, or just want to say hello? Send us a message!</p>
+
+                <form>
+
+                    <fieldset>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="purpose">Message Purpose</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="">Select one...</option>
+                            <option value="question">General Question</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="recipe">Recipe Suggestion</option>
+                            <option value="bug">Report an Issue</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <label>
+                            <input type="checkbox" name="subscribe">
+                            Subscribe to updates
+                        </label>
+                    </fieldset>
+
+                    <button type="submit" class="cta-btn">Send Message</button>
+
+                </form>
+            </section>
+
+        </main>
+
+        <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <footer>
+            <p>© <span id="currentyear"></span> Merari Flores – Utah, USA</p>
+            <p id="lastmodified"></p>
+            <p><a href="references.html">References & Credits</a></p>
+        </footer>
+
+    </body>
+
+</html>
