@@ -606,7 +606,7 @@ footer a {
     text-align: center;
     border: 2px solid var(--fsm-accent);
 
-    /* Keep your gradient but make it tighter */
+    
     background: linear-gradient(135deg,
             var(--fsm-card-bg),
             rgba(255, 255, 255, 0.85));
