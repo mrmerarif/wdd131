@@ -171,7 +171,6 @@ footer a {
         font-size: 1rem;
     }
 }
-
 /* =========================================================
    HERO SYSTEM
    ========================================================= */
@@ -213,9 +212,11 @@ footer a {
             rgba(0, 0, 0, 0.55));
 }
 
+/* MERGED hero-content (this replaces both previous blocks) */
 .hero-full .hero-content,
 .small-hero .hero-content,
-.fsm-mealideas .hero .hero-content {
+.fsm-mealideas .hero .hero-content,
+.hero-content {
     position: absolute;
     inset: 0;
     display: flex;
@@ -226,10 +227,8 @@ footer a {
     padding: 1.5rem;
     color: white;
     z-index: 2;
-}
-
-.hero-content {
     background-color: rgba(0, 0, 0, 0.001);
+   
 }
 
 .hero-full .hero-content h2,
@@ -255,9 +254,6 @@ footer a {
     margin-top: 1.25rem;
 }
 
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.001);
-}
 
 /* =========================================================
    CARD SYSTEM
