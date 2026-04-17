@@ -1,25 +1,4 @@
-/* NAVIGATION */
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0.6rem 1rem;
-    background-color: var(--secondary);
-    color: var(--primary);
-}
 
-nav a {
-    color: var(--primary);
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.3rem 0.6rem;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background: var(--primary);
-    color: var(--page-bg);
-    border-radius: 4px;
-}
 
 /* MAIN */
 main {
