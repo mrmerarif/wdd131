@@ -10,7 +10,7 @@ const recipes = [
     difficulty: "Easy",
     time: "30 min",
     ingredients: ["feta", "cherry tomatoes", "pasta", "olive oil", "garlic"],
-    image: "https://via.placeholder.com/600x400?text=Baked+Feta+Pasta+%E2%80%93+Few+Steps+Meals",
+    image: "images/baked-feta-pasta.webp",
     description: "The viral TikTok pasta — creamy, tangy, and unbelievably simple."
   },
   {
@@ -20,7 +20,7 @@ const recipes = [
     difficulty: "Easy",
     time: "20 min",
     ingredients: ["chicken", "honey", "soy sauce", "garlic", "butter"],
-    image: "https://via.placeholder.com/600x400?text=Honey+Garlic+Chicken+%E2%80%93+Few+Steps+Meals",
+    image: "images/honey-garlic-chicken1.webp",
     description: "Sweet, sticky, garlicky chicken made in one pan — a global favorite."
   },
   {
@@ -155,7 +155,7 @@ const recipes = [
     difficulty: "Easy",
     time: "10 min",
     ingredients: ["tortillas", "chicken", "BBQ sauce", "cheese"],
-    image: "https://via.placeholder.com/600x400?text=BBQ+Chicken+Quesadillas+%E2%80%93+Few+Steps+Meals",
+    image: "images/bbq-chicken-quesadilla.webp",
     description: "Crispy, cheesy, and packed with BBQ flavor."
   },
 
