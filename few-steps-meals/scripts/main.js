@@ -61,7 +61,7 @@ const recipes = [
     description: "Colorful vegetables tossed in a light soy‑garlic sauce over warm rice.",
     ingredients: ["rice", "broccoli", "carrots", "soy sauce", "garlic"],
     time: "15 min",
-    image: "images/veggie-stir-fry-bowl-small.webp",
+    image: "images/veggie-stir-fry-small.webp",
     popularity: 4,
     difficulty: "easy",
     isBudget: true,
